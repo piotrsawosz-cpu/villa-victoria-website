@@ -115,6 +115,11 @@ button { font-family: inherit; }
 }
 .lang-switch:hover { opacity: 1; }
 
+.mobile-lang-wrap {
+  display: none;
+  position: relative;
+}
+
 /* =========================================================
    Buttons
    ========================================================= */
@@ -1275,6 +1280,7 @@ button { font-family: inherit; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .vv-header nav { display: none; }
+  .mobile-lang-wrap { display: flex; align-items: center; }
   .cal-months { grid-template-columns: 1fr; }
   .hero-content { padding-top: 80px; padding-bottom: 0; }
   .hero-headline-br { display: none; }
