@@ -1,6 +1,7 @@
 // Section 6 - Reviews
 const ReviewsSection = () => {
   useVVLang();
+  const [page, setPage] = React.useState(0);
   const reviews = [
     {
       text: "Villa Victoria was perfect for our family of five. Our teenagers greatly enjoyed the hammock, and we all made great use of the beautiful pool and enjoyed the stunning views. The kitchen was well organized and stocked. We appreciated the location high on the hillside but still close enough to drive quickly into the center of town.",
@@ -92,7 +93,7 @@ const ReviewsSection = () => {
           </div>
         </div>
         <div className="reviews-grid">
-          {reviews.map((r, i) => (
+          {reviews.slice(page * 3, page * 3 + 3).map((r, i) => (
             <div key={i} className="review-card">
               <div className="review-stars">
                 {[0,1,2,3,4].map(j => <Icon key={j} name="starFilled" size={14} style={{ color: 'var(--iv-sand-500)' }}/>)}
@@ -107,6 +108,15 @@ const ReviewsSection = () => {
               </div>
             </div>
           ))}
+        </div>
+        <div className="reviews-nav">
+          <button className="reviews-arrow" onClick={() => setPage(p => p - 1)} disabled={page === 0}>
+            <Icon name="arrowLeft" size={20}/>
+          </button>
+          <span className="reviews-page">{page + 1} / {Math.ceil(reviews.length / 3)}</span>
+          <button className="reviews-arrow" onClick={() => setPage(p => p + 1)} disabled={page === Math.ceil(reviews.length / 3) - 1}>
+            <Icon name="arrowRight" size={20}/>
+          </button>
         </div>
         <div className="section-cta on-sand">
           <a href="#book" className="btn btn-primary">

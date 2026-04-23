@@ -1010,13 +1010,48 @@ button { font-family: inherit; }
   color: var(--iv-sand-500);
 }
 .review-text {
-  font-family: var(--iv-font-editorial);
-  font-style: italic;
-  font-size: 18px;
-  line-height: 1.55;
+  font-family: var(--iv-font-body);
+  font-size: 16px;
+  line-height: 1.6;
   color: var(--iv-ink-800);
 }
-.review-text.long { font-size: 16px; line-height: 1.6; }
+.review-text.long { font-size: 15px; line-height: 1.65; }
+.reviews-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+.reviews-arrow {
+  background: #fff;
+  border: 1px solid var(--iv-sand-200);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--iv-ink-700);
+  transition: background 0.2s, border-color 0.2s;
+}
+.reviews-arrow:hover:not(:disabled) {
+  background: var(--iv-sand-50);
+  border-color: var(--iv-sand-400);
+}
+.reviews-arrow:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+.reviews-page {
+  font-family: var(--iv-font-body);
+  font-size: 13px;
+  color: var(--iv-ink-500);
+  letter-spacing: 0.06em;
+  min-width: 40px;
+  text-align: center;
+}
 .review-meta {
   display: flex;
   justify-content: space-between;
