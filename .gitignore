@@ -1,2 +1,35 @@
-uploads/
+# macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Node.js (for when code scaffold is added)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Build output
+dist/
+build/
+.next/
+out/
+
+# Editor
+.vscode/settings.json
+.idea/
+
+# Logs
+*.log
+
+# Uploads & large raw asset folders (not needed in repo)
+uploads/
+Villa Victoria Photos/
+Ai Images - Villa Victoria/
+Villa Victoria - Main Website-handoff.zip

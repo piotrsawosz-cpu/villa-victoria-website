@@ -1,0 +1,136 @@
+{
+  "name": "Villa Victoria",
+  "tagline": "Your Costa Brava base. Perfectly yours.",
+  "overview": "Villa Victoria is a single signature villa in Roses, Costa Brava — a private haven for affluent families seeking authentic Mediterranean living. Warm, active, and deeply personal: a place where kids and adults alike find adventure, rest, and extraordinary food in one of Spain's most beautiful coastal regions. We are not about cold exclusivity — we are about making families feel at home in paradise.",
+  "location": "Roses, Costa Brava, Catalonia, Spain",
+  "brandValues": ["Family", "Adventure", "Authenticity", "Privacy", "Warmth"],
+  "visualAesthetics": [
+    "Mediterranean Warmth",
+    "Coastal Living",
+    "Sun-Drenched Elegance",
+    "Playful Luxury",
+    "Local Character"
+  ],
+  "toneOfVoice": ["Warm", "Inviting", "Active", "Genuine", "Personal"],
+  "brandPersonality": "Think of Villa Victoria as a knowledgeable local friend who happens to have a stunning house in Roses. They know the best hidden coves, the fisherman who sells the freshest catch, and the hiking trail that leads to the most breathtaking sunset. They welcome you like family and make sure every member — from the youngest to the oldest — has the time of their life.",
+  "colorPalette": {
+    "primary": {
+      "name": "Mediterranean Blue",
+      "hex": "#1A4E7A",
+      "usage": "Main brand color — headers, CTAs, key UI elements"
+    },
+    "secondary": {
+      "name": "Warm Sand",
+      "hex": "#D4A96A",
+      "usage": "Supporting color — accents, highlights, warmth elements"
+    },
+    "accent": {
+      "name": "Terracotta",
+      "hex": "#C1603A",
+      "usage": "Highlight color — buttons, special callouts, energy"
+    },
+    "neutral": {
+      "name": "Coastal Cream",
+      "hex": "#F5F0E8",
+      "usage": "Backgrounds, cards, breathing space"
+    },
+    "dark": {
+      "name": "Charcoal Olive",
+      "hex": "#3D4A3A",
+      "usage": "Body text, footers, dark mode elements"
+    },
+    "white": {
+      "name": "Pure White",
+      "hex": "#FFFFFF",
+      "usage": "Clean space, contrast, text on dark backgrounds"
+    }
+  },
+  "typography": {
+    "heading": {
+      "style": "Clean, modern sans-serif — bold and confident but not stiff",
+      "suggestion": "Montserrat Bold or similar",
+      "usage": "Page titles, carousel headlines, campaign titles"
+    },
+    "subheading": {
+      "style": "Light sans-serif — elegant and readable",
+      "suggestion": "Montserrat Light / Regular",
+      "usage": "Subtitles, descriptions, supporting text"
+    },
+    "body": {
+      "style": "Neutral, highly readable sans-serif",
+      "suggestion": "Inter or Open Sans",
+      "usage": "Descriptions, captions, body copy"
+    }
+  },
+  "photography": {
+    "style": [
+      "Golden hour light — warm, sun-drenched Mediterranean tones",
+      "Real family moments — not overly staged or stiff",
+      "Landscape-first — show the beauty of Costa Brava",
+      "Food photography — fresh, colorful, local produce",
+      "Activity-focused — kayaking, hiking, swimming, exploring"
+    ],
+    "avoid": [
+      "Cold, blue-tinted images",
+      "Overly formal or hotel-like shots",
+      "Stock-looking generic travel photos",
+      "Empty spaces without people or warmth"
+    ]
+  },
+  "contentPillars": [
+    {
+      "pillar": "Family Adventure",
+      "description": "Activities, experiences, and moments for the whole family in Costa Brava"
+    },
+    {
+      "pillar": "Local Discovery",
+      "description": "Best towns, hidden gems, markets, restaurants, and cultural spots around Roses"
+    },
+    {
+      "pillar": "Rest & Privacy",
+      "description": "The villa itself — peaceful moments, the terrace, the pool, the view"
+    },
+    {
+      "pillar": "Food & Flavour",
+      "description": "Costa Brava cuisine, local markets, fresh seafood, dining out and at home"
+    }
+  ],
+  "campaigns": [
+    {
+      "theme": "Family Adventure",
+      "creatives": [
+        { "title": "Where every day becomes a story." },
+        { "title": "Costa Brava, lived in full." },
+        { "title": "Adventures for the ones who matter most." },
+        { "title": "The sea is calling. And so is dinner." }
+      ]
+    },
+    {
+      "theme": "Rest & Privacy",
+      "creatives": [
+        { "title": "Your own slice of the Mediterranean." },
+        { "title": "Mornings on the terrace. Afternoons in the sea." },
+        { "title": "The privacy you've been craving." },
+        { "title": "Slow down. You're in Costa Brava now." }
+      ]
+    },
+    {
+      "theme": "Local Discovery",
+      "creatives": [
+        { "title": "Ten perfect towns. One perfect base." },
+        { "title": "Costa Brava, beyond the guidebook." },
+        { "title": "Find your favourite corner of Spain." },
+        { "title": "Live like a local. Feel like a guest." }
+      ]
+    }
+  ],
+  "instagramVoice": {
+    "captionStyle": "Short, evocative, warm. Lead with feeling, not features.",
+    "hashtags": ["#VillaVictoria", "#CostaBlava", "#Roses", "#CostaBrava", "#FamilyTravel", "#LuxuryVilla", "#MediterraneanLife", "#SpainTravel"],
+    "examples": [
+      "Ten towns. Endless stories. 📍 Roses, Costa Brava → save this for your next family trip.",
+      "The kind of morning you didn't know you needed. ☀️",
+      "Where adventure meets the sea — and dinner is always fresh."
+    ]
+  }
+}
