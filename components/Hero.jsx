@@ -125,10 +125,31 @@ const Hero = () => {
         <div ref={contentRef} className="hero-content">
           <div className="hero-eyebrow">{t('heroEyebrow')}</div>
           <h1 className="hero-headline">
-            {t('heroHeadline1')}<br/>
+            {t('heroHeadline1')}<span className="hero-headline-br"/>{' '}
             <em>{t('heroHeadline2')}</em>
           </h1>
           <p className="hero-sub">{t('heroSub')}</p>
+          <div className="hero-features">
+            <div className="hero-features-badge">
+              <Icon name="bed" size={20} />
+              <span>{t('heroBedrooms')}</span>
+            </div>
+            <span className="hero-feature-sep">|</span>
+            <div className="hero-features-badge">
+              <Icon name="mountain" size={20} />
+              <span>{t('heroViews')}</span>
+            </div>
+            <span className="hero-feature-sep">|</span>
+            <div className="hero-features-badge">
+              <Icon name="users" size={20} />
+              <span>{t('heroGuests')}</span>
+            </div>
+            <span className="hero-feature-sep">|</span>
+            <div className="hero-features-badge">
+              <Icon name="star" size={20} />
+              <span>{t('heroMoments')}</span>
+            </div>
+          </div>
           <div className="hero-ctas">
             <a href="#book" className="btn btn-primary">{t('checkAvailability')}</a>
             <a href="#house" className="btn btn-outline-light">{t('heroCtaSecondary')}</a>

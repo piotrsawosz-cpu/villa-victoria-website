@@ -15,6 +15,10 @@ window.__VV_TRANSLATIONS = {
     heroHeadline1: 'Family vacation villa',
     heroHeadline2: 'on the Costa Brava.',
     heroSub: 'Three bedrooms. Panoramic sea views. One unforgettable week with the whole family.',
+    heroBedrooms: '3 beds',
+    heroViews: 'Panoramic sea views',
+    heroGuests: 'fits 8 guests',
+    heroMoments: 'Unforgettable moments',
     heroCtaSecondary: 'See the house',
     scroll: 'Scroll',
 
@@ -150,6 +154,10 @@ window.__VV_TRANSLATIONS = {
     heroHeadline1: 'Villa de vacaciones familiar',
     heroHeadline2: 'en la Costa Brava.',
     heroSub: 'Tres dormitorios. Vistas panorámicas al mar. Una semana inolvidable con toda la familia.',
+    heroBedrooms: '3 camas',
+    heroViews: 'Vistas panorámicas al mar',
+    heroGuests: 'hasta 8 huéspedes',
+    heroMoments: 'Momentos inolvidables',
     heroCtaSecondary: 'Ver la casa',
     scroll: 'Desplazar',
 
@@ -274,6 +282,10 @@ window.__VV_TRANSLATIONS = {
     heroHeadline1: 'Villa familiale de vacances',
     heroHeadline2: 'sur la Costa Brava.',
     heroSub: 'Trois chambres. Vue panoramique sur la mer. Une semaine inoubliable en famille.',
+    heroBedrooms: '3 lits',
+    heroViews: 'Vue panoramique sur la mer',
+    heroGuests: 'jusqu\'à 8 personnes',
+    heroMoments: 'Moments inoubliables',
     heroCtaSecondary: 'Voir la maison',
     scroll: 'Défiler',
 
@@ -398,6 +410,10 @@ window.__VV_TRANSLATIONS = {
     heroHeadline1: 'Familien-Ferienvilla',
     heroHeadline2: 'an der Costa Brava.',
     heroSub: 'Drei Schlafzimmer. Panoramablick aufs Meer. Eine unvergessliche Woche mit der ganzen Familie.',
+    heroBedrooms: '3 Betten',
+    heroViews: 'Panoramablick aufs Meer',
+    heroGuests: 'bis zu 8 Gäste',
+    heroMoments: 'Unvergessliche Momente',
     heroCtaSecondary: 'Das Haus ansehen',
     scroll: 'Scrollen',
 
