@@ -48,6 +48,33 @@ const GallerySection = () => {
   items.forEach(i => { counts[i.cat] = (counts[i.cat] || 0) + 1; });
   counts.all = items.length;
 
+  const [lbIndex, setLbIndex] = React.useState(null);
+
+  const closeLb = () => setLbIndex(null);
+  const prev = (e) => { e.stopPropagation(); setLbIndex(i => (i - 1 + filtered.length) % filtered.length); };
+  const next = (e) => { e.stopPropagation(); setLbIndex(i => (i + 1) % filtered.length); };
+
+  // Close lightbox when filter changes
+  React.useEffect(() => { setLbIndex(null); }, [active]);
+
+  // Keyboard navigation
+  React.useEffect(() => {
+    if (lbIndex === null) return;
+    const onKey = (e) => {
+      if (e.key === 'Escape') closeLb();
+      if (e.key === 'ArrowLeft') setLbIndex(i => (i - 1 + filtered.length) % filtered.length);
+      if (e.key === 'ArrowRight') setLbIndex(i => (i + 1) % filtered.length);
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [lbIndex, filtered.length]);
+
+  // Body scroll lock
+  React.useEffect(() => {
+    document.body.style.overflow = lbIndex !== null ? 'hidden' : '';
+    return () => { document.body.style.overflow = ''; };
+  }, [lbIndex]);
+
   return (
     <section className="gallery-section" id="gallery" data-screen-label="03 Gallery">
       <div className="container">
@@ -74,7 +101,7 @@ const GallerySection = () => {
         </div>
         <div className="gallery-grid">
           {filtered.map((item, i) => (
-            <figure key={`${active}-${i}`} className="gallery-tile">
+            <figure key={`${active}-${i}`} className="gallery-tile" onClick={() => setLbIndex(i)} style={{ cursor: 'pointer' }}>
               <img src={item.src} alt={item.label} loading="lazy"/>
               <figcaption className="caption">{item.label}</figcaption>
             </figure>
@@ -87,6 +114,21 @@ const GallerySection = () => {
           </a>
         </div>
       </div>
+
+      {lbIndex !== null && (
+        <div className="lightbox" onClick={closeLb}>
+          <div className="lb-content" onClick={e => e.stopPropagation()}>
+            <img src={filtered[lbIndex].src} alt={filtered[lbIndex].label} />
+            <div className="lb-caption">
+              <span>{filtered[lbIndex].label}</span>
+              <span className="lb-counter">{lbIndex + 1} / {filtered.length}</span>
+            </div>
+          </div>
+          <button className="lb-close" onClick={closeLb}>✕</button>
+          <button className="lb-prev" onClick={prev}>←</button>
+          <button className="lb-next" onClick={next}>→</button>
+        </div>
+      )}
     </section>
   );
 };
