@@ -1,7 +1,7 @@
 // Hero section with scroll-scrubbed IMAGE SEQUENCE on canvas.
-// Preloads 138 jpg frames, draws current frame to canvas on scroll.
-const HERO_FRAME_COUNT = 138;
-const HERO_FRAME_PATH = (i) => `media/hero-frames/${String(i + 1).padStart(3, '0')}.jpg`;
+// Preloads 121 webp frames, draws current frame to canvas on scroll.
+const HERO_FRAME_COUNT = 121;
+const HERO_FRAME_PATH = (i) => `media/hero-frames/${String(i + 1).padStart(3, '0')}.webp`;
 
 const Hero = () => {
   useVVLang();
