@@ -42,7 +42,7 @@ const HouseSection = () => {
             <div className="map-wrap">
               <iframe
                 title="Villa Victoria location"
-                src="https://maps.google.com/maps?q=753P%2BV2+Roses,+Spain&output=embed&z=16"
+                src="https://maps.google.com/maps?q=42.2547079,3.185015&output=embed&z=16"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />
@@ -51,7 +51,7 @@ const HouseSection = () => {
                   Villa Victoria
                   <small>{t('mapAddress')}</small>
                 </div>
-                <a href="https://www.google.com/maps/place/753P%2BV2+Roses,+Spain" target="_blank" rel="noopener">
+                <a href="https://maps.app.goo.gl/U6WBA9w99zw3BK9C6" target="_blank" rel="noopener">
                   {t('openInMaps')}
                 </a>
               </div>
