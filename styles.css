@@ -1243,4 +1243,5 @@ button { font-family: inherit; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .vv-header nav { display: none; }
   .cal-months { grid-template-columns: 1fr; }
+  .hero-content { justify-content: flex-start; padding-top: 164px; padding-bottom: 0; }
 }

@@ -42,15 +42,16 @@ const HouseSection = () => {
             <div className="map-wrap">
               <iframe
                 title="Villa Victoria location"
-                src="https://www.openstreetmap.org/export/embed.html?bbox=3.1720%2C42.2600%2C3.2000%2C42.2770&amp;layer=mapnik&amp;marker=42.26843%2C3.18576"
+                src="https://maps.google.com/maps?q=753P%2BV2+Roses,+Spain&output=embed&z=16"
                 loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
               />
               <div className="map-caption">
                 <div className="place">
                   Villa Victoria
                   <small>{t('mapAddress')}</small>
                 </div>
-                <a href="https://maps.app.goo.gl/DsPUpKw1TuEiQZ5q6" target="_blank" rel="noopener">
+                <a href="https://www.google.com/maps/place/753P%2BV2+Roses,+Spain" target="_blank" rel="noopener">
                   {t('openInMaps')}
                 </a>
               </div>
