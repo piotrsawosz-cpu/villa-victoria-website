@@ -1,0 +1,359 @@
+/* ============================================================
+   Villa Victoria — Colors & Type
+   Import this file anywhere to get brand tokens + base type.
+   ============================================================ */
+
+/* ---------- Fonts ---------- */
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./fonts/PlayfairDisplay-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./fonts/PlayfairDisplay-500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./fonts/PlayfairDisplay-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./fonts/PlayfairDisplay-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./fonts/PlayfairDisplay-400-italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('./fonts/PlayfairDisplay-700-italic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('./fonts/CormorantGaramond-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('./fonts/CormorantGaramond-500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('./fonts/CormorantGaramond-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('./fonts/CormorantGaramond-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('./fonts/CormorantGaramond-400-italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('./fonts/CormorantGaramond-700-italic.woff2') format('woff2');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./fonts/Montserrat-300.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./fonts/Montserrat-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./fonts/Montserrat-500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./fonts/Montserrat-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./fonts/Montserrat-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ============================================================
+   Tokens
+   ============================================================ */
+:root {
+  /* ---------- Brand core palette ---------- */
+  --iv-sand:        #9b8465;  /* primary — warm sand */
+  --iv-ink:         #000518;  /* near-black navy — text, contrast */
+  --iv-white:       #ffffff;  /* pure white — space, backgrounds */
+
+  /* ---------- Sand scale (tints + shades of #9b8465) ----------
+     Generated around the primary; use for washes, hovers, borders. */
+  --iv-sand-50:     #faf7f2;  /* nearly-white warm */
+  --iv-sand-100:    #f4efe6;  /* page wash / section tint */
+  --iv-sand-200:    #e8ddc9;
+  --iv-sand-300:    #d4c3a3;
+  --iv-sand-400:    #bba684;
+  --iv-sand-500:    #9b8465;  /* = primary */
+  --iv-sand-600:    #7f6b52;
+  --iv-sand-700:    #5f5040;
+  --iv-sand-800:    #3f362b;
+  --iv-sand-900:    #241e18;
+
+  /* ---------- Ink scale (navy neutrals, from #000518) ---------- */
+  --iv-ink-900:     #000518;  /* = primary ink */
+  --iv-ink-800:     #0a1030;
+  --iv-ink-700:     #1a2042;
+  --iv-ink-600:     #343a5a;
+  --iv-ink-500:     #5b607a;
+  --iv-ink-400:     #8f93a6;
+  --iv-ink-300:     #bdc0cd;
+  --iv-ink-200:     #dcdee6;
+  --iv-ink-100:     #eef0f4;
+  --iv-ink-50:      #f7f8fa;
+
+  /* ---------- Semantic surfaces ---------- */
+  --iv-bg:               var(--iv-white);
+  --iv-bg-warm:          var(--iv-sand-50);    /* "page wash" */
+  --iv-bg-sand:          var(--iv-sand-100);   /* section tint */
+  --iv-bg-ink:           var(--iv-ink-900);    /* dark mode / hero */
+
+  /* ---------- Semantic text ---------- */
+  --iv-fg:               var(--iv-ink-900);    /* default body */
+  --iv-fg-muted:         var(--iv-ink-600);    /* secondary */
+  --iv-fg-subtle:        var(--iv-ink-500);    /* captions */
+  --iv-fg-on-sand:       var(--iv-ink-900);    /* text on sand backgrounds */
+  --iv-fg-on-ink:        var(--iv-white);      /* text on dark */
+  --iv-fg-accent:        var(--iv-sand-600);   /* sand used as accent text */
+
+  /* ---------- Borders / hairlines ---------- */
+  --iv-border:           var(--iv-sand-200);
+  --iv-border-strong:    var(--iv-sand-400);
+  --iv-border-ink:       var(--iv-ink-200);
+  --iv-hairline:         rgba(0, 5, 24, 0.08);
+
+  /* ---------- Interactive (sand as primary action) ---------- */
+  --iv-action:           var(--iv-sand-500);
+  --iv-action-hover:     var(--iv-sand-600);
+  --iv-action-press:     var(--iv-sand-700);
+  --iv-action-fg:        var(--iv-white);
+
+  --iv-action-ink:       var(--iv-ink-900);    /* alt: ink buttons */
+  --iv-action-ink-hover: var(--iv-ink-800);
+  --iv-action-ink-press: var(--iv-ink-700);
+
+  /* ---------- Support colors (used sparingly, tuned to palette) ---------- */
+  --iv-olive:            #6f7a4e;   /* subtle success / "available" */
+  --iv-terracotta:       #b5654a;   /* subtle warning / highlight */
+  --iv-error:            #8c2f2a;   /* error, form invalid */
+
+  /* ---------- Typography families ---------- */
+  --iv-font-display:     'Playfair Display', 'Garamond', Georgia, serif;
+  --iv-font-editorial:   'Cormorant Garamond', 'Garamond', Georgia, serif;
+  --iv-font-body:        'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+
+  /* ---------- Type scale ----------
+     Mobile-ish base; headlines use display family + tight leading. */
+  --iv-fs-display-xl:   clamp(56px, 8vw, 120px);
+  --iv-fs-display-lg:   clamp(44px, 6vw, 88px);
+  --iv-fs-display-md:   clamp(36px, 4.5vw, 64px);
+  --iv-fs-h1:           clamp(32px, 3.5vw, 48px);
+  --iv-fs-h2:           clamp(26px, 2.6vw, 36px);
+  --iv-fs-h3:           clamp(20px, 1.8vw, 26px);
+  --iv-fs-h4:           18px;
+  --iv-fs-body-lg:      18px;
+  --iv-fs-body:         16px;
+  --iv-fs-body-sm:      14px;
+  --iv-fs-caption:      12px;
+  --iv-fs-eyebrow:      12px;   /* uppercase, tracked */
+
+  /* ---------- Line heights ---------- */
+  --iv-lh-display:      1.02;
+  --iv-lh-heading:      1.12;
+  --iv-lh-body:         1.6;
+  --iv-lh-tight:        1.35;
+
+  /* ---------- Letter spacing ---------- */
+  --iv-ls-display:      -0.01em;
+  --iv-ls-heading:      -0.005em;
+  --iv-ls-body:         0;
+  --iv-ls-eyebrow:      0.22em;   /* tracked uppercase */
+  --iv-ls-button:       0.08em;
+
+  /* ---------- Spacing scale (8-based, generous) ---------- */
+  --iv-space-1:   4px;
+  --iv-space-2:   8px;
+  --iv-space-3:   12px;
+  --iv-space-4:   16px;
+  --iv-space-5:   24px;
+  --iv-space-6:   32px;
+  --iv-space-7:   48px;
+  --iv-space-8:   64px;
+  --iv-space-9:   96px;
+  --iv-space-10:  128px;
+  --iv-space-11:  192px;
+
+  /* ---------- Radii — restrained; the brand skews square ---------- */
+  --iv-radius-none:  0px;
+  --iv-radius-xs:    2px;
+  --iv-radius-sm:    4px;
+  --iv-radius-md:    8px;
+  --iv-radius-lg:    16px;
+  --iv-radius-pill:  999px;
+
+  /* ---------- Shadows — soft, warm, low-contrast ---------- */
+  --iv-shadow-xs:  0 1px 2px rgba(0, 5, 24, 0.04);
+  --iv-shadow-sm:  0 2px 8px rgba(0, 5, 24, 0.06);
+  --iv-shadow-md:  0 10px 28px -12px rgba(0, 5, 24, 0.12);
+  --iv-shadow-lg:  0 24px 60px -24px rgba(0, 5, 24, 0.22);
+  --iv-shadow-hero:0 40px 100px -40px rgba(0, 5, 24, 0.35);
+  --iv-shadow-inset: inset 0 0 0 1px rgba(0, 5, 24, 0.06);
+
+  /* ---------- Motion ---------- */
+  --iv-ease:           cubic-bezier(0.22, 0.61, 0.36, 1);   /* gentle ease-out */
+  --iv-ease-in-out:    cubic-bezier(0.65, 0, 0.35, 1);
+  --iv-dur-fast:       160ms;
+  --iv-dur-base:       260ms;
+  --iv-dur-slow:       480ms;
+  --iv-dur-reveal:     800ms;
+
+  /* ---------- Container ---------- */
+  --iv-container:      1280px;
+  --iv-container-narrow: 880px;
+  --iv-gutter:         clamp(20px, 4vw, 48px);
+}
+
+/* ============================================================
+   Base / semantic element styles
+   ============================================================ */
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  color: var(--iv-fg);
+  background: var(--iv-bg);
+}
+
+body {
+  margin: 0;
+  font-family: var(--iv-font-body);
+  font-size: var(--iv-fs-body);
+  line-height: var(--iv-lh-body);
+  letter-spacing: var(--iv-ls-body);
+  color: var(--iv-fg);
+  background: var(--iv-bg);
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--iv-font-display);
+  color: var(--iv-fg);
+  font-weight: 500;
+  letter-spacing: var(--iv-ls-heading);
+  line-height: var(--iv-lh-heading);
+  margin: 0;
+}
+
+h1 { font-size: var(--iv-fs-h1); line-height: var(--iv-lh-display); letter-spacing: var(--iv-ls-display); }
+h2 { font-size: var(--iv-fs-h2); }
+h3 { font-size: var(--iv-fs-h3); }
+h4 { font-size: var(--iv-fs-h4); font-weight: 600; }
+
+p  { margin: 0; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--iv-dur-fast) var(--iv-ease), opacity var(--iv-dur-fast) var(--iv-ease);
+}
+a:hover { color: var(--iv-sand-600); }
+
+small { font-size: var(--iv-fs-caption); color: var(--iv-fg-muted); }
+
+/* ============================================================
+   Utility text classes
+   ============================================================ */
+
+.iv-display-xl { font-family: var(--iv-font-display); font-size: var(--iv-fs-display-xl); line-height: var(--iv-lh-display); letter-spacing: var(--iv-ls-display); font-weight: 500; }
+.iv-display-lg { font-family: var(--iv-font-display); font-size: var(--iv-fs-display-lg); line-height: var(--iv-lh-display); letter-spacing: var(--iv-ls-display); font-weight: 500; }
+.iv-display-md { font-family: var(--iv-font-display); font-size: var(--iv-fs-display-md); line-height: var(--iv-lh-display); letter-spacing: var(--iv-ls-display); font-weight: 500; }
+
+.iv-editorial    { font-family: var(--iv-font-editorial); font-style: italic; font-weight: 400; line-height: var(--iv-lh-tight); }
+.iv-editorial-lg { font-family: var(--iv-font-editorial); font-size: clamp(28px, 3vw, 44px); font-style: italic; font-weight: 400; line-height: var(--iv-lh-tight); letter-spacing: 0.01em; }
+
+.iv-eyebrow {
+  font-family: var(--iv-font-body);
+  font-size: var(--iv-fs-eyebrow);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--iv-ls-eyebrow);
+  color: var(--iv-fg-muted);
+}
+
+.iv-lead { font-size: var(--iv-fs-body-lg); line-height: var(--iv-lh-body); color: var(--iv-fg-muted); max-width: 62ch; }
+.iv-body { font-size: var(--iv-fs-body); line-height: var(--iv-lh-body); }
+.iv-caption { font-size: var(--iv-fs-caption); line-height: 1.5; color: var(--iv-fg-subtle); }
+
+/* Accent rule — a short sand divider used above headings */
+.iv-rule {
+  display: inline-block;
+  width: 40px;
+  height: 1px;
+  background: var(--iv-sand-500);
+  vertical-align: middle;
+}
+
+/* Selection */
+::selection {
+  background: var(--iv-sand-300);
+  color: var(--iv-ink-900);
+}

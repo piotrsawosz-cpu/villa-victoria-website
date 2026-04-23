@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Villa Victoria · Costa Brava, Spain</title>
+<link rel="icon" href="brand/favicon.svg" type="image/svg+xml"/>
+<link rel="stylesheet" href="styles.css?v=13"/>
+</head>
+<body>
+<div id="top"></div>
+<div id="root"></div>
+
+<script>
+  window.__TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+    "accent": "#9b8465",
+    "heroHeadlineStyle": "Editorial",
+    "darkArea": true
+  }/*EDITMODE-END*/;
+</script>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+<script src="components/i18n.js"></script>
+<script type="text/babel" src="components/Icon.jsx"></script>
+<script type="text/babel" src="components/Chrome.jsx"></script>
+<script type="text/babel" src="components/Hero.jsx"></script>
+<script type="text/babel" src="components/HouseSection.jsx"></script>
+<script type="text/babel" src="components/GallerySection.jsx"></script>
+<script type="text/babel" src="components/AreaSection.jsx"></script>
+<script type="text/babel" src="components/BookSection.jsx"></script>
+<script type="text/babel" src="components/ReviewsSection.jsx"></script>
+<script type="text/babel" src="components/FaqSection.jsx"></script>
+<script type="text/babel" src="components/TweaksPanel.jsx"></script>
+
+<script type="text/babel">
+  const App = () => (
+    <React.Fragment>
+      <Header/>
+      <Hero/>
+      <HouseSection/>
+      <GallerySection/>
+      <AreaSection/>
+      <BookSection/>
+      <ReviewsSection/>
+      <FaqSection/>
+      <Footer/>
+      <TweaksPanel/>
+    </React.Fragment>
+  );
+  ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
+</body>
+</html>
