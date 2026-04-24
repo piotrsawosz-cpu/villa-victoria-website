@@ -1201,8 +1201,8 @@ button { font-family: inherit; }
   align-items: start;
 }
 .footer-brand .logo-big {
-  height: 150px;
-  margin-left: -10px;
+  height: 80px;
+  margin-left: -6px;
 }
 .footer-brand .tag {
   font-family: var(--iv-font-editorial);
