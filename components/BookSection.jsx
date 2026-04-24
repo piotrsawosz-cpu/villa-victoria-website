@@ -107,7 +107,7 @@ const BookSection = () => {
             <div className="eyebrow">{t('enquireEyebrow')}</div>
             <h2>{t('enquireHeadline')} <em>Piotr.</em></h2>
             <div className="pricing">
-              <span className="price-value">€1,000</span>
+              <span className="price-value">$1,300</span>
               <span className="price-unit">{t('priceUnit')}</span>
             </div>
             <p className="note">{t('enquireNote')}</p>
