@@ -22,6 +22,14 @@ const AreaSection = () => {
   const [active, setActive] = React.useState(0);
   const current = active !== null ? activities[active] : null;
 
+  const handleTabClick = (i) => {
+    if (window.innerWidth <= 760) {
+      setActive(prev => prev === i ? null : i);
+    } else {
+      setActive(i);
+    }
+  };
+
   const renderPanelContent = (act) => (
     <>
       <div className="area-panel-image">
@@ -69,7 +77,7 @@ const AreaSection = () => {
               <React.Fragment key={a.key}>
                 <button
                   className={`area-tab ${active === i ? 'active' : ''}`}
-                  onClick={() => setActive(prev => prev === i ? null : i)}
+                  onClick={() => handleTabClick(i)}
                   role="tab"
                   aria-selected={active === i}
                 >
@@ -87,11 +95,9 @@ const AreaSection = () => {
               </React.Fragment>
             ))}
           </div>
-          {current && (
-            <div className="area-panel area-panel--desktop" key={current.key}>
-              {renderPanelContent(current)}
-            </div>
-          )}
+          <div className="area-panel area-panel--desktop" key={current ? current.key : ''}>
+            {current && renderPanelContent(current)}
+          </div>
         </div>
         <div className="section-cta on-dark">
           <a href="#book" className="btn btn-primary">
