@@ -1,31 +1,29 @@
 // Section 5 - Availability + contact
 const BookSection = () => {
   useVVLang();
-  // Generate two months of demo availability
-  const today = new Date(2026, 3, 22); // April 22, 2026
+  const today = new Date();
   const [monthOffset, setMonthOffset] = React.useState(0);
+  const [bookedRanges, setBookedRanges] = React.useState([]);
+  const [calLoading, setCalLoading] = React.useState(true);
 
-  // Pre-seed demo bookings: some weeks taken, some free
+  React.useEffect(() => {
+    fetch('/api/availability')
+      .then(r => r.json())
+      .then(data => setBookedRanges(data.bookedRanges || []))
+      .catch(() => {})
+      .finally(() => setCalLoading(false));
+  }, []);
+
   const bookings = React.useMemo(() => {
     const set = new Set();
-    // block some date ranges
-    const ranges = [
-      ['2026-04-25','2026-05-03'],
-      ['2026-05-09','2026-05-16'],
-      ['2026-06-13','2026-06-27'],
-      ['2026-07-04','2026-07-18'],
-      ['2026-07-25','2026-08-15'],
-      ['2026-08-22','2026-08-29'],
-      ['2026-09-12','2026-09-19'],
-    ];
-    for (const [s, e] of ranges) {
-      const sd = new Date(s), ed = new Date(e);
-      for (let d = new Date(sd); d <= ed; d.setDate(d.getDate()+1)) {
-        set.add(d.toISOString().slice(0,10));
+    for (const { start, end } of bookedRanges) {
+      const sd = new Date(start), ed = new Date(end);
+      for (let d = new Date(sd); d <= ed; d.setDate(d.getDate() + 1)) {
+        set.add(d.toISOString().slice(0, 10));
       }
     }
     return set;
-  }, []);
+  }, [bookedRanges]);
 
   const buildMonth = (base, offset) => {
     const d = new Date(base.getFullYear(), base.getMonth() + offset, 1);
@@ -99,7 +97,7 @@ const BookSection = () => {
                   {t('booked')}
                 </div>
                 <div className="legend-item" style={{ marginLeft: 'auto', color: 'var(--iv-ink-500)', fontStyle: 'italic', fontFamily: 'var(--iv-font-editorial)' }}>
-                  {t('syncNote')}
+                  {calLoading ? '…' : t('syncNote')}
                 </div>
               </div>
             </div>
