@@ -72,54 +72,56 @@ Owner: Peter — piotr.sawosz@gmail.com
 
 ## File Organization Rules
 
-### Where website files live (root level only)
+### Where website files live (`website/` subfolder)
 
-| Directory/File | Purpose |
+All website source code lives inside the `website/` folder. Vercel is configured (via `vercel.json`) to deploy from this folder.
+
+| Path | Purpose |
 |---|---|
-| `index.html`, `styles.css` | Main entry points |
-| `components/` | React JSX components |
-| `api/` | Serverless API endpoints |
-| `brand/` | Logos, fonts, CSS design tokens used by the site |
-| `media/` | Web-optimized images and videos |
-| `media/activities/` | Activity icons and videos |
-| `media/gallery/` | Gallery images |
-| `media/hero-frames/` | Hero animation frames |
-| `package.json` | Node config |
+| `website/index.html` | Main HTML entry point |
+| `website/styles.css` | Main stylesheet |
+| `website/components/` | React JSX components |
+| `website/api/` | Serverless API endpoints |
+| `website/brand/` | Logos, fonts, CSS design tokens used by the site |
+| `website/media/` | Web-optimized images and videos |
+| `website/media/activities/` | Activity icons and videos |
+| `website/media/gallery/` | Gallery images |
+| `website/media/hero-frames/` | Hero animation frames |
+| `website/package.json` | Node config |
 
-### Where project/marketing files live
+### Where project/marketing files live (root level)
 
 | Directory | Purpose |
 |---|---|
 | `Ads/` | Ad concepts, carousel specs, visitor avatars |
 | `Brand Guidelines/` | Brand documents, raw logo files |
 | `Reviews/` | Guest review screenshots |
+| `Pictures/` | Source photos and AI images (gitignored, not on GitHub) |
+| `Old Files/` | Legacy duplicates (gitignored, not on GitHub) |
 
 ### Rules — follow these strictly
 
-- **Do NOT create new top-level folders for website features.** Use `media/`, `components/`, or `api/` as appropriate.
-- **Do NOT create new top-level folders for project documents.** Use `Ads/`, `Brand Guidelines/`, or `Reviews/`.
-- New activity images → `media/activities/`
-- New gallery images → `media/gallery/`
-- New website-ready brand assets → `brand/`
-- New raw/source brand assets → `Brand Guidelines/`
+- **All website changes go inside `website/`.** Do NOT create new folders at the root level for website features.
+- **New activity images → `website/media/activities/`**
+- **New gallery images → `website/media/gallery/`**
+- **New website-ready brand assets → `website/brand/`**
+- **New raw/source brand assets → `Brand Guidelines/`** (not inside `website/`)
 - `.claude/` is gitignored — Claude's memory lives there safely without going to GitHub.
-- `Villa Victoria Photos/` and `Ai Images - Villa Victoria/` are gitignored — too large for GitHub.
+- `Pictures/` and `Old Files/` are gitignored — they never go to GitHub.
 
 ### Folders that should NEVER be pushed to GitHub
 
 - `.claude/` — personal Claude config and memory
-- `Villa Victoria Photos/` — original photography (already gitignored)
-- `Ai Images - Villa Victoria/` — AI-generated source images (already gitignored)
-- `elements activites roses/` — raw source images (web versions are in `media/activities/`)
-- `Villa Victoria Main Website/` — legacy duplicate folder (active site is root-level)
-- Any file ending in ` 2.ext` — these are Mac Finder duplicates, not real files
+- `Pictures/` — source photography and AI images (too large, gitignored)
+- `Old Files/` — legacy duplicates (gitignored)
+- Any file ending in ` 2.ext` — Mac Finder duplicates
 
 ### How to push updates to GitHub
 
 When told **"push those updates to our GitHub repo"**, run exactly these commands:
 
 ```bash
-git add index.html styles.css components/ api/ brand/ media/ CLAUDE.md Ads/ "Brand Guidelines/" Reviews/ package.json .gitignore villa_victoria_context.md "Landing Page - Structure & Copy.md"
+git add website/ CLAUDE.md Ads/ "Brand Guidelines/" Reviews/ .gitignore vercel.json villa_victoria_context.md "Landing Page - Structure & Copy.md"
 git commit -m "<short summary of what changed>"
 git push origin main
 ```
