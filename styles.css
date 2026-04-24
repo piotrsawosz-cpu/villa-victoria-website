@@ -1190,21 +1190,59 @@ button { font-family: inherit; }
 .vv-footer {
   background: var(--iv-ink-900);
   color: #fff;
-  padding: 24px clamp(20px,4vw,48px);
+  padding: 96px clamp(20px,4vw,48px) 48px;
 }
-.footer-bottom {
+.footer-grid {
   max-width: 1280px;
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 16px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  gap: 48px;
+  align-items: start;
+}
+.footer-brand .logo-big {
+  height: 150px;
+  margin-left: -10px;
+}
+.footer-brand .tag {
+  font-family: var(--iv-font-editorial);
+  font-style: italic;
+  font-size: 20px;
+  color: var(--iv-sand-200);
+  line-height: 1.4;
+  max-width: 320px;
+  margin-top: 20px;
+}
+.footer-col-label {
+  font-family: var(--iv-font-body);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--iv-sand-400);
+  margin-bottom: 16px;
+}
+.footer-col a, .footer-col .addr {
+  display: block;
+  font-family: var(--iv-font-body);
+  font-size: 14px;
+  color: var(--iv-ink-200);
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+.footer-col a:hover { color: var(--iv-sand-300); }
+.footer-col .addr { color: var(--iv-ink-400); margin-top: 8px; }
+
+.footer-bottom {
+  max-width: 1280px;
+  margin: 48px auto 0;
+  border-top: 1px solid rgba(255,255,255,0.12);
+  padding-top: 24px;
+  text-align: center;
   color: var(--iv-ink-400);
   font-family: var(--iv-font-body);
   font-size: 12px;
 }
-.footer-logo { height: 32px; margin-right: 8px; }
-.footer-bottom a { color: var(--iv-ink-400); text-decoration: none; }
-.footer-bottom a:hover { color: var(--iv-sand-300); }
 
 /* =========================================================
    Tweaks panel
@@ -1269,7 +1307,7 @@ button { font-family: inherit; }
    Responsive
    ========================================================= */
 @media (max-width: 760px) {
-  .house-intro, .house-details, .area-tabs-wrap, .book-grid, .faq-grid { grid-template-columns: 1fr; gap: 48px; }
+  .house-intro, .house-details, .area-tabs-wrap, .book-grid, .faq-grid, .footer-grid { grid-template-columns: 1fr; gap: 48px; }
   .house-intro-right { padding-top: 0; }
   .area-panel--desktop { display: none; }
   .area-panel--inline { display: grid; grid-template-columns: 1fr; margin-top: 8px; }
