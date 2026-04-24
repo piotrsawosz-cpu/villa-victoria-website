@@ -163,41 +163,11 @@ const Header = () => {
 
 const Footer = () => {
   useVVLang();
-  const addr = t('footerAddress').split('|');
   return (
     <footer className="vv-footer">
-      <div className="footer-grid">
-        <div className="footer-brand">
-          <img src="brand/logo-primary-inverse.svg" alt="Villa Victoria" className="logo-big"/>
-          <p className="tag">{t('footerTag')}</p>
-        </div>
-        <div className="footer-col">
-          <div className="footer-col-label">{t('footerVisit')}</div>
-          <a href="#house">{t('navHouse')}</a>
-          <a href="#gallery">{t('navGallery')}</a>
-          <a href="#area">{t('navArea')}</a>
-          <a href="#reviews">{t('navReviews')}</a>
-        </div>
-        <div className="footer-col">
-          <div className="footer-col-label">{t('footerPlan')}</div>
-          <a href="#book">{t('footerAvailability')}</a>
-          <a href="#faq">{t('navFaq')}</a>
-          <a href="#book">{t('footerRates')}</a>
-        </div>
-        <div className="footer-col">
-          <div className="footer-col-label">{t('footerWrite')}</div>
-          <a href="mailto:VillaVictoriaSpain@gmail.com">VillaVictoriaSpain@gmail.com</a>
-          <a href="tel:+17866587698">+1 786 658 7698</a>
-          <a href="https://wa.me/17866587698" target="_blank" rel="noopener">{t('whatsappPiotr')}</a>
-          <div className="addr">{addr[0]}<br/>{addr[1]}</div>
-        </div>
-      </div>
       <div className="footer-bottom">
-        <div>{t('footerCopy')}</div>
-        <div>
-          <a href="#">{t('privacy')}</a>
-          <a href="#">{t('terms')}</a>
-        </div>
+        <img src="brand/logo-primary-inverse.svg" alt="Villa Victoria" className="footer-logo" />
+        <span>{t('footerCopy')}</span>
       </div>
     </footer>
   );
