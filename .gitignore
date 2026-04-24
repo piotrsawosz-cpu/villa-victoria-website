@@ -33,3 +33,16 @@ uploads/
 Villa Victoria Photos/
 Ai Images - Villa Victoria/
 Villa Victoria - Main Website-handoff.zip
+
+# Claude Code config — personal config and memory, not project code
+.claude/
+
+# macOS Finder duplicate files (created when you duplicate a file in Finder)
+*\ 2.*
+*\ 2/
+
+# Source image dumps — web-ready versions already live in media/activities/
+elements activites roses/
+
+# Legacy duplicate website folder — active site is the root-level files
+Villa Victoria Main Website/
