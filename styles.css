@@ -710,6 +710,7 @@ button { font-family: inherit; }
   gap: 40px;
   align-items: start;
 }
+.area-panel--inline { display: none; }
 .area-panel-image {
   aspect-ratio: 4 / 5;
   background: var(--iv-ink-700);
@@ -1310,7 +1311,8 @@ button { font-family: inherit; }
 @media (max-width: 760px) {
   .house-intro, .house-details, .area-tabs-wrap, .book-grid, .faq-grid, .footer-grid { grid-template-columns: 1fr; gap: 48px; }
   .house-intro-right { padding-top: 0; }
-  .area-panel { grid-template-columns: 1fr; }
+  .area-panel--desktop { display: none; }
+  .area-panel--inline { display: grid; grid-template-columns: 1fr; margin-top: 8px; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-grid { grid-template-columns: 1fr 1fr; }

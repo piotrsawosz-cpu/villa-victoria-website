@@ -20,7 +20,38 @@ const AreaSection = () => {
   const activities = staticActivities.map((s, i) => ({ ...s, ...translatedActs[i] }));
 
   const [active, setActive] = React.useState(0);
-  const current = activities[active];
+  const current = active !== null ? activities[active] : null;
+
+  const renderPanelContent = (act) => (
+    <>
+      <div className="area-panel-image">
+        {act.type === 'video' ? (
+          <video src={act.media} autoPlay muted loop playsInline
+            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+        ) : (
+          <img src={act.media} alt={t('areaTab_' + act.key)} loading="lazy"
+            style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+        )}
+      </div>
+      <div className="area-panel-content">
+        <span className="kicker">{act.kicker}</span>
+        <h3>
+          {t('areaTab_' + act.key)}{' '}
+          <em>{act.titleEm}</em>
+        </h3>
+        <p>{act.lead}</p>
+        <p>{act.body}</p>
+        <div className="area-panel-meta">
+          {act.meta.map(([l, v], idx) => (
+            <div key={idx} className="area-meta-item">
+              <div className="label">{l}</div>
+              <div className="value">{v}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
+  );
 
   return (
     <section className="area-section" id="area" data-screen-label="04 The Area">
@@ -35,49 +66,32 @@ const AreaSection = () => {
         <div className="area-tabs-wrap">
           <div className="area-tabs" role="tablist">
             {activities.map((a, i) => (
-              <button
-                key={a.key}
-                className={`area-tab ${active === i ? 'active' : ''}`}
-                onClick={() => setActive(i)}
-                role="tab"
-                aria-selected={active === i}
-              >
-                <span style={{ display: 'inline-flex', alignItems: 'center', gap: 14 }}>
-                  <Icon name={a.icon} size={20} style={{ color: active === i ? 'var(--iv-sand-300)' : 'rgba(255,255,255,0.4)', flexShrink: 0 }}/>
-                  {t('areaTab_' + a.key)}
-                </span>
-                <Icon name="arrowRight" size={18} className="arrow"/>
-              </button>
+              <React.Fragment key={a.key}>
+                <button
+                  className={`area-tab ${active === i ? 'active' : ''}`}
+                  onClick={() => setActive(prev => prev === i ? null : i)}
+                  role="tab"
+                  aria-selected={active === i}
+                >
+                  <span style={{ display: 'inline-flex', alignItems: 'center', gap: 14 }}>
+                    <Icon name={a.icon} size={20} style={{ color: active === i ? 'var(--iv-sand-300)' : 'rgba(255,255,255,0.4)', flexShrink: 0 }}/>
+                    {t('areaTab_' + a.key)}
+                  </span>
+                  <Icon name="arrowRight" size={18} className="arrow"/>
+                </button>
+                {active === i && (
+                  <div className="area-panel area-panel--inline">
+                    {renderPanelContent(current)}
+                  </div>
+                )}
+              </React.Fragment>
             ))}
           </div>
-          <div className="area-panel" key={current.key}>
-            <div className="area-panel-image">
-              {current.type === 'video' ? (
-                <video src={current.media} autoPlay muted loop playsInline
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
-              ) : (
-                <img src={current.media} alt={t('areaTab_' + current.key)} loading="lazy"
-                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
-              )}
+          {current && (
+            <div className="area-panel area-panel--desktop" key={current.key}>
+              {renderPanelContent(current)}
             </div>
-            <div className="area-panel-content">
-              <span className="kicker">{current.kicker}</span>
-              <h3>
-                {t('areaTab_' + current.key)}{' '}
-                <em>{current.titleEm}</em>
-              </h3>
-              <p>{current.lead}</p>
-              <p>{current.body}</p>
-              <div className="area-panel-meta">
-                {current.meta.map(([l, v], i) => (
-                  <div key={i} className="area-meta-item">
-                    <div className="label">{l}</div>
-                    <div className="value">{v}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+          )}
         </div>
         <div className="section-cta on-dark">
           <a href="#book" className="btn btn-primary">
