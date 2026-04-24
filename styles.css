@@ -1325,7 +1325,7 @@ button { font-family: inherit; }
   .mobile-lang-wrap { display: flex; align-items: center; }
   .cal-months { grid-template-columns: 1fr; }
   .calendar { padding: 16px; }
-  .contact-value { font-size: 14px; }
+  .contact-value { font-size: 14px; min-width: 0; overflow-wrap: break-word; }
   .hero-content { padding-top: 80px; padding-bottom: 0; }
   .hero-headline-br { display: none; }
   .hero-headline em { display: inline; line-height: inherit; }
