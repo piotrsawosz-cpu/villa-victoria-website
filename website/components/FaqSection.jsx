@@ -17,7 +17,7 @@ const FaqSection = () => {
     {
       q: "What does it cost per week?",
       a: [
-        "€1,000 per night for the whole villa &mdash; so €7,000 for a standard 7-night stay. No per-person charges; the price is the same whether you&rsquo;re a couple or a family of eight.",
+        "€1,300 per night for the whole villa &mdash; so €9,100 for a standard 7-night stay. No per-person charges; the price is the same whether you&rsquo;re a couple or a family of eight.",
       ],
     },
     {

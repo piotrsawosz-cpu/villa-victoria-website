@@ -51,7 +51,7 @@ Rooms covered: Entrance, Main Living Area, Kitchen, Home Cinema, Hallway, Bottom
 - **Capacity:** 8 guests comfortably, up to 10
 - **Bedrooms:** 3 (Bed 1: queen/king, Bed 2: queen/king, Bed 3: king + wall bed)
 - **Amenities:** Private pool, jacuzzi, sauna, outdoor BBQ, garden, large terrace
-- **Rate:** €1,000/night
+- **Rate:** €1,300/night
 - **Nearby:** Girona (40 min), Barcelona (1.5 hrs), beaches, natural park hiking
 
 ---

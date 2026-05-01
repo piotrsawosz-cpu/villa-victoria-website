@@ -28,7 +28,7 @@ Villa Victoria is a beautiful 3-bedroom, 3-bathroom villa perched on the mountai
 3 full bathrooms
 
 ### Nightly Rate
-**€1,000 per night**
+**€1,300 per night**
 
 ---
 
