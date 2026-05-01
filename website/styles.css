@@ -784,7 +784,7 @@ button { font-family: inherit; }
   display: grid;
   grid-template-columns: 1.1fr 1fr;
   gap: clamp(40px, 6vw, 96px);
-  align-items: start;
+  align-items: stretch;
 }
 .calendar {
   background: var(--iv-sand-50);
@@ -792,6 +792,38 @@ button { font-family: inherit; }
   border: 1px solid var(--iv-sand-200);
   max-width: 100%;
   overflow: hidden;
+}
+.piotr-card {
+  background: var(--iv-sand-50);
+  border: 1px solid var(--iv-sand-200);
+  overflow: hidden;
+  height: 100%;
+}
+.piotr-photo-desktop { display: block; height: 100%; }
+.piotr-photo-mobile { display: none; }
+.piotr-photo {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.piotr-bio {
+  padding: 28px 32px 32px;
+}
+.piotr-name {
+  font-family: var(--iv-font-display);
+  font-weight: 600;
+  font-size: 22px;
+  color: var(--iv-ink-900);
+  margin: 0 0 10px;
+  letter-spacing: -0.01em;
+}
+.piotr-text {
+  font-family: var(--iv-font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--iv-ink-700);
+  margin: 0;
 }
 .cal-head {
   display: flex;
@@ -1321,6 +1353,9 @@ button { font-family: inherit; }
   .mobile-lang-wrap { display: flex; align-items: center; }
   .cal-months { grid-template-columns: 1fr; }
   .calendar { padding: 16px; }
+  .piotr-photo-desktop { display: none; }
+  .piotr-photo-mobile { display: block; }
+  .piotr-photo-mobile .piotr-photo { height: auto; aspect-ratio: 4 / 3; }
   .contact-value { font-size: 14px; min-width: 0; overflow-wrap: break-word; }
   .hero-content { padding-top: 80px; padding-bottom: 0; }
   .hero-headline-br { display: none; }

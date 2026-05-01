@@ -117,6 +117,7 @@ window.__VV_TRANSLATIONS = {
     enquireHeadline: 'Write to',
     priceUnit: 'per night · whole villa · 7-night minimum',
     enquireNote: "The fastest way to check a specific week — message me on WhatsApp. I usually reply within the hour, unless I'm in the pool.",
+    piotrBio: "Hi, I'm Piotr — the eldest son of the owners of Villa Victoria. I'd be truly happy to help you plan the perfect stay. Whatever you need before or during your trip, I'm here to make sure this becomes the best vacation of your life.",
     messageWhatsapp: 'Message Piotr on WhatsApp',
 
     // Reviews
@@ -252,6 +253,7 @@ window.__VV_TRANSLATIONS = {
     enquireHeadline: 'Escribe a',
     priceUnit: 'por noche · villa completa · mínimo 7 noches',
     enquireNote: 'La forma más rápida de consultar una semana — escríbeme por WhatsApp. Suelo responder en una hora, salvo que esté en la piscina.',
+    piotrBio: 'Hola, soy Piotr — el hijo mayor de los propietarios de Villa Victoria. Estaré encantado de ayudarte a planificar la estancia perfecta. Todo lo que necesites antes o durante tu viaje, estoy aquí para asegurarme de que estas sean las mejores vacaciones de tu vida.',
     messageWhatsapp: 'Escribir a Piotr por WhatsApp',
 
     reviewsEyebrow: 'Reseñas de huéspedes',
@@ -380,6 +382,7 @@ window.__VV_TRANSLATIONS = {
     enquireHeadline: 'Écrivez à',
     priceUnit: 'par nuit · villa entière · minimum 7 nuits',
     enquireNote: "Le moyen le plus rapide de vérifier une semaine — écrivez-moi sur WhatsApp. Je réponds en général dans l'heure, sauf si je suis dans la piscine.",
+    piotrBio: "Bonjour, je suis Piotr — le fils aîné des propriétaires de Villa Victoria. Je serai vraiment heureux de vous aider à planifier le séjour parfait. Tout ce dont vous avez besoin avant ou pendant votre voyage, je suis là pour faire de ces vacances les meilleures de votre vie.",
     messageWhatsapp: 'Écrire à Piotr sur WhatsApp',
 
     reviewsEyebrow: 'Avis des familles',
@@ -508,6 +511,7 @@ window.__VV_TRANSLATIONS = {
     enquireHeadline: 'Schreiben Sie an',
     priceUnit: 'pro Nacht · gesamte Villa · Mindestaufenthalt 7 Nächte',
     enquireNote: 'Der schnellste Weg, eine Woche zu prüfen — schreiben Sie mir auf WhatsApp. Ich antworte normalerweise innerhalb einer Stunde, außer ich bin gerade im Pool.',
+    piotrBio: 'Hallo, ich bin Piotr — der älteste Sohn der Eigentümer der Villa Victoria. Ich helfe Ihnen sehr gerne dabei, den perfekten Aufenthalt zu planen. Was auch immer Sie vor oder während Ihrer Reise brauchen, ich bin hier, um sicherzustellen, dass dies der schönste Urlaub Ihres Lebens wird.',
     messageWhatsapp: 'Piotr auf WhatsApp schreiben',
 
     reviewsEyebrow: 'Gäste-Bewertungen',
