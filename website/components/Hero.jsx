@@ -8,6 +8,7 @@ const Hero = () => {
   const canvasRef = React.useRef(null);
   const containerRef = React.useRef(null);
   const contentRef = React.useRef(null);
+  const overlayRef = React.useRef(null);
   const framesRef = React.useRef([]);
   const [loadedCount, setLoadedCount] = React.useState(0);
   const [firstReady, setFirstReady] = React.useState(false);
@@ -17,6 +18,8 @@ const Hero = () => {
     const container = containerRef.current;
     if (!canvas || !container) return;
     const ctx = canvas.getContext('2d');
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = 'high';
 
     const frames = [];
     framesRef.current = frames;
@@ -69,6 +72,7 @@ const Hero = () => {
         contentRef.current.style.opacity = opacity;
         contentRef.current.style.transform = `translateY(${(1 - opacity) * -24}px)`;
         contentRef.current.style.pointerEvents = opacity < 0.1 ? 'none' : 'auto';
+        if (overlayRef.current) overlayRef.current.style.opacity = opacity;
       }
     };
 
@@ -121,6 +125,7 @@ const Hero = () => {
             <div className="hero-loader-label">{t('loading')} · {pct}%</div>
           </div>
         )}
+        <div ref={overlayRef} className="hero-overlay"/>
         <div className="hero-scrim"/>
         <div ref={contentRef} className="hero-content">
           <div className="hero-eyebrow">{t('heroEyebrow')}</div>
