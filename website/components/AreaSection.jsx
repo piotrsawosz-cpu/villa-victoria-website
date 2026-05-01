@@ -19,8 +19,12 @@ const AreaSection = () => {
   const translatedActs = dict.areaActivities || window.__VV_TRANSLATIONS.en.areaActivities;
   const activities = staticActivities.map((s, i) => ({ ...s, ...translatedActs[i] }));
 
-  const [active, setActive] = React.useState(0);
+  const [active, setActive] = React.useState(() =>
+    window.innerWidth <= 760 ? null : 0
+  );
   const current = active !== null ? activities[active] : null;
+
+  const tabButtonRefs = React.useRef([]);
 
   const handleTabClick = (i) => {
     if (window.innerWidth <= 760) {
@@ -29,6 +33,17 @@ const AreaSection = () => {
       setActive(i);
     }
   };
+
+  React.useEffect(() => {
+    if (window.innerWidth <= 760 && active !== null) {
+      const el = tabButtonRefs.current[active];
+      if (el) {
+        requestAnimationFrame(() => {
+          el.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+      }
+    }
+  }, [active]);
 
   const renderPanelContent = (act) => (
     <>
@@ -76,6 +91,7 @@ const AreaSection = () => {
             {activities.map((a, i) => (
               <React.Fragment key={a.key}>
                 <button
+                  ref={el => tabButtonRefs.current[i] = el}
                   className={`area-tab ${active === i ? 'active' : ''}`}
                   onClick={() => handleTabClick(i)}
                   role="tab"
