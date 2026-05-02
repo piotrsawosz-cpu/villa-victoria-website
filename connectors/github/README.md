@@ -47,7 +47,7 @@ When the user says **"push those updates to our GitHub repo"**:
    ```bash
    git add website/ CLAUDE.md Ads/ "Brand Guidelines/" Reviews/ .gitignore vercel.json \
            villa_victoria_context.md "Landing Page - Structure & Copy.md" \
-           context/ assets/ connectors/ .mcp.json
+           context/ connectors/ .mcp.json
    ```
    Drop any path from the line that didn't actually change.
 
@@ -71,6 +71,7 @@ These are gitignored, but explicit form helps catch accidents:
 - `Pictures/`, `Old Files/`, `Villa Victoria Photos/`, `Ai Images - Villa Victoria/`, `Villa Victoria Main Website/` — large or legacy
 - `elements activites roses/` — source image dumps
 - `archive/` — local-only superseded material
+- `assets/` — local-only source binaries (raw photos, AI images), kept on this Mac only
 - `inbox/*` (except `inbox/README.md`) — triage zone
 - `CLAUDE.local.md` — personal Claude overrides
 - `.env`, `.env.*` — secrets

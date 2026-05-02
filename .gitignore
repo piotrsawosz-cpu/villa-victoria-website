@@ -51,6 +51,7 @@ CLAUDE.local.md
 
 # Workspace-only zones (kept locally but not pushed)
 archive/
+assets/
 inbox/*
 !inbox/README.md
 

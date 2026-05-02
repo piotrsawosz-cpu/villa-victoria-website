@@ -97,11 +97,11 @@ All website source code lives inside the `website/` folder. Vercel is configured
 | `Brand Guidelines/` | Brand documents, raw logo files |
 | `Reviews/` | Guest review screenshots |
 | `context/` | Long-lived project knowledge (read `context/README.md` first as the index) |
-| `assets/` | Binary creative assets that aren't web-bound (raw photos, source images, ad ideas) |
 | `connectors/` | External tool integrations — each has a `README.md` with auth/usage |
 | `.mcp.json` | MCP server registrations |
 | `Pictures/` | Source photos and AI images (gitignored, not on GitHub) |
 | `Old Files/` | Legacy duplicates (gitignored, not on GitHub) |
+| `assets/` | Local-only source binaries (raw photos, AI images, mp4s, screenshots) — gitignored, never pushed. Web-ready versions live in `website/media/` instead. |
 | `inbox/` | Triage zone — run `/triage-inbox` when files are dropped here (gitignored, only the README is committed) |
 | `archive/` | Local-only superseded material (gitignored) |
 
@@ -121,6 +121,7 @@ All website source code lives inside the `website/` folder. Vercel is configured
 - `Pictures/` — source photography and AI images (too large, gitignored)
 - `Old Files/` — legacy duplicates (gitignored)
 - `archive/` — local-only superseded material (gitignored)
+- `assets/` — local-only source binaries (raw photos, AI images), gitignored
 - `inbox/` (except its `README.md`) — triage zone, contents are personal
 - `CLAUDE.local.md` — personal Claude overrides (gitignored)
 - `.env` and `.env.*` — secrets (gitignored)
@@ -137,7 +138,7 @@ When told **"push those updates to our GitHub repo"**:
    ```bash
    git add website/ CLAUDE.md Ads/ "Brand Guidelines/" Reviews/ .gitignore vercel.json \
            villa_victoria_context.md "Landing Page - Structure & Copy.md" \
-           context/ assets/ connectors/ .mcp.json
+           context/ connectors/ .mcp.json
    ```
 3. **Commit and push** (confirm with the user before `git push`):
    ```bash
