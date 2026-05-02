@@ -96,8 +96,14 @@ All website source code lives inside the `website/` folder. Vercel is configured
 | `Ads/` | Ad concepts, carousel specs, visitor avatars |
 | `Brand Guidelines/` | Brand documents, raw logo files |
 | `Reviews/` | Guest review screenshots |
+| `context/` | Long-lived project knowledge (read `context/README.md` first as the index) |
+| `assets/` | Binary creative assets that aren't web-bound (raw photos, source images, ad ideas) |
+| `connectors/` | External tool integrations — each has a `README.md` with auth/usage |
+| `.mcp.json` | MCP server registrations |
 | `Pictures/` | Source photos and AI images (gitignored, not on GitHub) |
 | `Old Files/` | Legacy duplicates (gitignored, not on GitHub) |
+| `inbox/` | Triage zone — run `/triage-inbox` when files are dropped here (gitignored, only the README is committed) |
+| `archive/` | Local-only superseded material (gitignored) |
 
 ### Rules — follow these strictly
 
@@ -114,16 +120,80 @@ All website source code lives inside the `website/` folder. Vercel is configured
 - `.claude/` — personal Claude config and memory
 - `Pictures/` — source photography and AI images (too large, gitignored)
 - `Old Files/` — legacy duplicates (gitignored)
+- `archive/` — local-only superseded material (gitignored)
+- `inbox/` (except its `README.md`) — triage zone, contents are personal
+- `CLAUDE.local.md` — personal Claude overrides (gitignored)
+- `.env` and `.env.*` — secrets (gitignored)
 - Any file ending in ` 2.ext` — Mac Finder duplicates
 
 ### How to push updates to GitHub
 
-When told **"push those updates to our GitHub repo"**, run exactly these commands:
+The workspace itself is the working copy of `piotrsawosz-cpu/villa-victoria-website`. Pushes go directly from this folder. See `connectors/github/README.md` for full setup details (auth, identity, troubleshooting).
 
-```bash
-git add website/ CLAUDE.md Ads/ "Brand Guidelines/" Reviews/ .gitignore vercel.json villa_victoria_context.md "Landing Page - Structure & Copy.md"
-git commit -m "<short summary of what changed>"
-git push origin main
-```
+When told **"push those updates to our GitHub repo"**:
+
+1. **Sanity check** — `git status` and `git diff --staged`. Unstage anything from the never-push list before committing.
+2. **Stage explicitly** (only paths that actually changed in the session):
+   ```bash
+   git add website/ CLAUDE.md Ads/ "Brand Guidelines/" Reviews/ .gitignore vercel.json \
+           villa_victoria_context.md "Landing Page - Structure & Copy.md" \
+           context/ assets/ connectors/ .mcp.json
+   ```
+3. **Commit and push** (confirm with the user before `git push`):
+   ```bash
+   git commit -m "<short summary of what changed>"
+   git push origin main
+   ```
 
 **Do NOT run `git add .` or `git add -A`** — this would risk accidentally staging ignored or unwanted files.
+
+Vercel auto-deploys from `main` within ~1 min. No build step.
+
+---
+
+## Workspace conventions
+
+These rules apply to working in this repo, separate from the brand/file-organization rules above.
+
+1. **For project context, read `context/README.md` first.** It indexes every context file with a short description and tells you when each is relevant. Read individual context files only when the task calls for them — never read every file in `context/` by default.
+2. **`inbox/` is a triage zone, not storage.** When the user says they've added a file to inbox, run `/triage-inbox`.
+3. **Personal overrides live in `CLAUDE.local.md`** (gitignored), not here.
+4. **When you add a connector, MCP server, or skill, update the manifest below in the same change.** If it's not in this file, you'll forget it exists.
+
+---
+
+## Capability manifest
+
+This is the inventory of everything available beyond standard tools. **Always check here first before assuming a capability is missing.**
+
+### MCP servers
+
+Registered in `.mcp.json`. Supporting files (configs, helpers) live in `connectors/<name>-mcp/`.
+
+| Name | Purpose |
+|---|---|
+| _(none yet)_ | |
+
+### CLI connectors
+
+Command-line tools you can shell out to. Each has a folder in `connectors/<name>/` with a README explaining auth and usage.
+
+| Name | Purpose | Folder |
+|---|---|---|
+| `github` | Push website updates to `piotrsawosz-cpu/villa-victoria-website`. Auth via HTTPS + macOS Keychain. | `connectors/github/` |
+
+### Skills
+
+Project-local skills live in `.claude/skills/<skill-name>/` (gitignored, so personal). Auto-discovered via frontmatter in each `SKILL.md`, but listed here so they surface during planning.
+
+| Skill | Purpose |
+|---|---|
+| `skill-creator` | Create new skills, modify and improve existing skills, and measure skill performance. Use whenever the user wants to create, edit, or evaluate a skill. |
+
+### Slash commands
+
+Custom commands in `.claude/commands/` (gitignored).
+
+| Command | Purpose |
+|---|---|
+| `/triage-inbox` | Sort files in `inbox/` into their proper homes. |

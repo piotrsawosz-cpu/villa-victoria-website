@@ -5,8 +5,7 @@
 
 # Environment variables
 .env
-.env.local
-.env.*.local
+.env.*
 
 # Node.js (for when code scaffold is added)
 node_modules/
@@ -46,3 +45,14 @@ elements activites roses/
 
 # Legacy duplicate website folder — active site is the root-level files
 Villa Victoria Main Website/
+
+# Personal Claude overrides — not committed
+CLAUDE.local.md
+
+# Workspace-only zones (kept locally but not pushed)
+archive/
+inbox/*
+!inbox/README.md
+
+# Windows
+Thumbs.db
