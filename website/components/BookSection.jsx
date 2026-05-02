@@ -35,7 +35,7 @@ const BookSection = () => {
             </div>
             <p className="note">{t('enquireNote')}</p>
             <div className="contact-methods">
-              <a className="contact-row" href="https://wa.me/17866587698" target="_blank" rel="noopener">
+              <a className="contact-row" href="https://wa.me/17866587698?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20availability%20and%20price%20for%20Villa%20Victoria" target="_blank" rel="noopener">
                 <Icon name="message" size={22} className="contact-icon"/>
                 <span className="contact-label">WhatsApp</span>
                 <span className="contact-value">+1 786 658 7698</span>
@@ -51,7 +51,7 @@ const BookSection = () => {
                 <span className="contact-value">VillaVictoriaSpain@gmail.com</span>
               </a>
             </div>
-            <a href="https://wa.me/17866587698" className="btn btn-primary" target="_blank" rel="noopener" style={{ marginTop: 8 }}>
+            <a href="https://wa.me/17866587698?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20availability%20and%20price%20for%20Villa%20Victoria" className="btn btn-primary" target="_blank" rel="noopener" style={{ marginTop: 8 }}>
               {t('messageWhatsapp')}
               <Icon name="arrowRight" size={16}/>
             </a>
