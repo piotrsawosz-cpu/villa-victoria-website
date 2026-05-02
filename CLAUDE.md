@@ -10,18 +10,18 @@ Villa Victoria is a 3-bedroom luxury villa in Roses, Costa Brava, Spain. The own
 
 | File | What it contains |
 |------|-----------------|
-| `villa_victoria_context.md` | Full property details, amenities, location, pricing, target guests, platforms |
-| `Brand Guidelines/brand_guidelines.json` | Colors, typography, tone of voice, content pillars, campaign copy |
-| `Landing Page - Structure & Copy.md` | Detailed spec for the direct-booking landing page |
-| `Ads/visitor_avatars.md` | Target guest personas |
+| `context/property-profile.md` | Full property details, amenities, location, pricing, target guests, platforms |
+| `brand-guidelines/brand_guidelines.json` | Colors, typography, tone of voice, content pillars, campaign copy |
+| `context/landing-page-spec.md` | Detailed spec for the direct-booking landing page |
+| `ads/visitor_avatars.md` | Target guest personas |
 
 ## Asset Directories
 
 ```
 Villa Victoria Photos/     — Professional photography, organized by room (01–15)
 Ai Images - Villa Victoria/ — AI-generated images, same room structure
-Ads/                       — Ad concepts, carousel specs, visitor avatars
-Reviews/                   — Guest testimonials
+ads/                       — Ad concepts, carousel specs, visitor avatars
+reviews/                   — Guest testimonials
 ```
 
 Rooms covered: Entrance, Main Living Area, Kitchen, Home Cinema, Hallway, Bottom Floor Terrace, BBQ, Garden, Pool & Jacuzzi, Bedroom 1–3, Bathroom 1–3, plus Drone Shots and AI Lifestyle Photos.
@@ -93,9 +93,9 @@ All website source code lives inside the `website/` folder. Vercel is configured
 
 | Directory | Purpose |
 |---|---|
-| `Ads/` | Ad concepts, carousel specs, visitor avatars |
-| `Brand Guidelines/` | Brand documents, raw logo files |
-| `Reviews/` | Guest review screenshots |
+| `ads/` | Ad concepts, carousel specs, visitor avatars |
+| `brand-guidelines/` | Brand documents, raw logo files |
+| `reviews/` | Guest review screenshots |
 | `context/` | Long-lived project knowledge (read `context/README.md` first as the index) |
 | `connectors/` | External tool integrations — each has a `README.md` with auth/usage |
 | `.mcp.json` | MCP server registrations |
@@ -111,7 +111,7 @@ All website source code lives inside the `website/` folder. Vercel is configured
 - **New activity images → `website/media/activities/`**
 - **New gallery images → `website/media/gallery/`**
 - **New website-ready brand assets → `website/brand/`**
-- **New raw/source brand assets → `Brand Guidelines/`** (not inside `website/`)
+- **New raw/source brand assets → `brand-guidelines/`** (not inside `website/`)
 - `.claude/` is gitignored — Claude's memory lives there safely without going to GitHub.
 - `Pictures/` and `Old Files/` are gitignored — they never go to GitHub.
 
@@ -136,8 +136,7 @@ When told **"push those updates to our GitHub repo"**:
 1. **Sanity check** — `git status` and `git diff --staged`. Unstage anything from the never-push list before committing.
 2. **Stage explicitly** (only paths that actually changed in the session):
    ```bash
-   git add website/ CLAUDE.md Ads/ "Brand Guidelines/" Reviews/ .gitignore vercel.json \
-           villa_victoria_context.md "Landing Page - Structure & Copy.md" \
+   git add website/ CLAUDE.md ads/ brand-guidelines/ reviews/ .gitignore vercel.json \
            context/ connectors/ .mcp.json
    ```
 3. **Commit and push** (confirm with the user before `git push`):
@@ -173,7 +172,7 @@ Registered in `.mcp.json`. Supporting files (configs, helpers) live in `connecto
 
 | Name | Purpose |
 |---|---|
-| _(none yet)_ | |
+| `meta-ads` | Read, draft, launch, and review Meta (Facebook/Instagram) ad campaigns. Official Meta MCP, open beta. OAuth via Meta Business Suite AI Connectors. User-scoped (`~/.claude.json`), not in this repo's `.mcp.json`. |
 
 ### CLI connectors
 
@@ -182,6 +181,7 @@ Command-line tools you can shell out to. Each has a folder in `connectors/<name>
 | Name | Purpose | Folder |
 |---|---|---|
 | `github` | Push website updates to `piotrsawosz-cpu/villa-victoria-website`. Auth via HTTPS + macOS Keychain. | `connectors/github/` |
+| `meta-ads` | Reference docs for the Meta Ads MCP connector — auth, capabilities, guardrails, CLI fallback. | `connectors/meta-ads/` |
 
 ### Skills
 
@@ -198,3 +198,12 @@ Custom commands in `.claude/commands/` (gitignored).
 | Command | Purpose |
 |---|---|
 | `/triage-inbox` | Sort files in `inbox/` into their proper homes. |
+
+### Meta Ads guardrails
+
+Apply whenever the `meta-ads` MCP is used. See `connectors/meta-ads/README.md` for details.
+
+- Confirm with Peter before any action that **creates, launches, edits budgets, or pauses** live campaigns, ad sets, or ads.
+- Read-only actions (pulling metrics, listing campaigns, drafting copy) do not require confirmation.
+- Default daily-budget ceiling per ad set: **€50** — anything above requires explicit approval in that turn.
+- Meta creates new resources in PAUSED state by default. Never flip a campaign to ACTIVE without Peter's explicit go-ahead.

@@ -7,6 +7,8 @@
 | File | Read when… |
 |---|---|
 | `project-overview.md` | At the start of a new session, or when asked about the project's purpose, scope, or stage. |
+| `property-profile.md` | When asked about the villa's amenities, capacity, location, nightly rate, or target-guest details. |
+| `landing-page-spec.md` | When working on the direct-booking landing page — copy, sections, structure, CTAs. |
 <!-- Add a row whenever a context file is added. The "Read when…" column must be specific enough that Claude can decide relevance from this entry alone, without opening the file. -->
 
 ## Conventions

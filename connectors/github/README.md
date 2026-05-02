@@ -45,8 +45,7 @@ When the user says **"push those updates to our GitHub repo"**:
 
 2. Stage only the paths that changed in the session (never `git add .` / `git add -A`):
    ```bash
-   git add website/ CLAUDE.md Ads/ "Brand Guidelines/" Reviews/ .gitignore vercel.json \
-           villa_victoria_context.md "Landing Page - Structure & Copy.md" \
+   git add website/ CLAUDE.md ads/ brand-guidelines/ reviews/ .gitignore vercel.json \
            context/ connectors/ .mcp.json
    ```
    Drop any path from the line that didn't actually change.

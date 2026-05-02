@@ -80,7 +80,7 @@ Icon + label grid (2 × 5), no long descriptions:
 - **Fully equipped kitchen**
 - **BBQ area**
 - **Home cinema**
-- **Nightly rate** — *from €1,000 / night*
+- **Nightly rate** — *from €1,300 / night*
 
 Short descriptor under the grid (one line):
 > Villa Victoria is a private home set inside a natural park above Roses — built for long family stays, not quick turnovers.
@@ -254,7 +254,7 @@ Below the calendar, a compact inquiry strip:
 - Primary button: **Send inquiry** (terracotta)
 
 Microcopy under the button:
-> *From €1,000 per night · no fees to inquire · reply within a few hours.*
+> *From €1,300 per night · no fees to inquire · reply within a few hours.*
 
 ### Right column — Direct contact
 
@@ -343,7 +343,7 @@ Above the contact list, a short line:
 Short lines you can reuse for meta descriptions, ads, OG tags, or sprinkled through the page.
 
 **One-liner descriptions (SEO / meta / OG):**
-- Villa Victoria — a 3-bedroom family vacation villa above Roses, Costa Brava, with pool, jacuzzi, sauna, and panoramic Gulf views. Sleeps up to 10, from €1,000 / night.
+- Villa Victoria — a 3-bedroom family vacation villa above Roses, Costa Brava, with pool, jacuzzi, sauna, and panoramic Gulf views. Sleeps up to 10, from €1,300 / night.
 - A private villa on the Costa Brava, set inside a natural park above Roses. Pool, jacuzzi, sauna, and a view you won't stop talking about.
 
 **Button microcopy variants (for A/B later):**
@@ -371,7 +371,7 @@ Short lines you can reuse for meta descriptions, ads, OG tags, or sprinkled thro
 
 ## Open Questions for Peter
 
-1. Is €1,000 / night year-round, or does it vary by season? Minimum stay per season?
+1. Is €1,300 / night year-round, or does it vary by season? Minimum stay per season?
 2. Are pets allowed?
 3. What's the best phone number to show publicly, or do we prefer WhatsApp-only for first contact?
 4. Do you want the calendar to sync live from Airbnb + Booking.com (recommended — requires a tool like Hospitable, Smoobu, or Lodgify), or should we start with a manually-updated one?
