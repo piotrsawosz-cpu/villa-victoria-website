@@ -193,6 +193,12 @@ const Footer = () => {
         </div>
       </div>
       <div className="footer-bottom">
+        <div className="footer-social">
+          <a href="https://www.instagram.com/villa_victoria_spain/" target="_blank" rel="noopener" aria-label="Instagram"><img src="brand/instagram.png" alt=""/></a>
+          <a href="https://www.facebook.com/VillaVictoriaSpain" target="_blank" rel="noopener" aria-label="Facebook"><img src="brand/facebook.png" alt=""/></a>
+          <a href="https://airbnb.com/h/villa-victoria" target="_blank" rel="noopener" aria-label="Airbnb"><img src="brand/airbnb.png" alt=""/></a>
+          <a href="https://share.google/0w1XYmcbnXSLlebv8" target="_blank" rel="noopener" aria-label="Google Maps listing"><Icon name="mapPin" size={22}/></a>
+        </div>
         <span>{t('footerCopy')}</span>
       </div>
     </footer>

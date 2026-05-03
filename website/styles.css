@@ -1279,6 +1279,26 @@ button { font-family: inherit; }
   font-family: var(--iv-font-body);
   font-size: 12px;
 }
+.footer-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 20px;
+}
+.footer-social a {
+  color: var(--iv-ink-200);
+  display: inline-flex;
+  align-items: center;
+  opacity: 0.85;
+  transition: opacity 0.2s ease, color 0.2s ease;
+}
+.footer-social a:hover { opacity: 1; color: var(--iv-sand-300); }
+.footer-social img {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
 
 /* =========================================================
    Tweaks panel
