@@ -187,8 +187,8 @@ const Footer = () => {
         <div className="footer-col">
           <div className="footer-col-label">{t('footerWrite')}</div>
           <a href="mailto:VillaVictoriaSpain@gmail.com">VillaVictoriaSpain@gmail.com</a>
-          <a href="tel:+17866587698">+1 786 658 7698</a>
-          <a href="https://wa.me/17866587698?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20availability%20and%20price%20for%20Villa%20Victoria" target="_blank" rel="noopener">{t('whatsappPiotr')}</a>
+          <a href="tel:+34692852918">+34 692 852 918</a>
+          <a href="https://wa.me/34692852918?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20availability%20and%20price%20for%20Villa%20Victoria" target="_blank" rel="noopener">{t('whatsappPiotr')}</a>
           <div className="addr">{addr[0]}<br/>{addr[1]}</div>
         </div>
       </div>

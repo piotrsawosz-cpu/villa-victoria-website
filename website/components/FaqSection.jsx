@@ -48,7 +48,7 @@ const FaqSection = () => {
     {
       q: "How do I book?",
       a: [
-        "Send me a message on WhatsApp (+1 786 658 7698), email (VillaVictoriaSpain@gmail.com), or give me a call. I&rsquo;ll confirm the dates, share the booking details, and walk you through everything before you arrive.",
+        "Send me a message on WhatsApp (+34 692 852 918), email (VillaVictoriaSpain@gmail.com), or give me a call. I&rsquo;ll confirm the dates, share the booking details, and walk you through everything before you arrive.",
       ],
     },
   ];
