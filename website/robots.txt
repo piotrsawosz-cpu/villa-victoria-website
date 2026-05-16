@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /book
+Disallow: /book.html
 
 Sitemap: https://villavictoriaspain.com/sitemap.xml
