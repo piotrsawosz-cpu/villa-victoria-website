@@ -74,7 +74,8 @@ h3 { font-size: 17px; font-weight: 600; }
   display: flex;
   align-items: center;
 }
-.vv-header__logo img { height: 44px; width: auto; display: block; }
+.vv-header__logo img { height: 44px; width: auto; }
+.vv-header__logo-img--light { display: block; }
 .vv-header__logo-img--inverse { display: none; }
 .vv-hero__title-overlay { display: none; }
 .vv-meta__headline { display: none; }
@@ -374,6 +375,7 @@ h3 { font-size: 17px; font-weight: 600; }
   border-radius: var(--vv-radius-md);
   overflow: hidden;
   transition: box-shadow 0.2s;
+  cursor: pointer;
 }
 .vv-sleep__card:hover { box-shadow: var(--vv-shadow-card); }
 .vv-sleep__img {
@@ -1087,7 +1089,7 @@ h3 { font-size: 17px; font-weight: 600; }
   .vv-mobile-bar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 12px;
     position: fixed;
     left: 0;
@@ -1099,19 +1101,6 @@ h3 { font-size: 17px; font-weight: 600; }
     padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
     box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.06);
   }
-  .vv-mobile-bar__price {
-    font-size: 14px;
-    color: var(--vv-text);
-    line-height: 1.2;
-  }
-  .vv-mobile-bar__price strong {
-    display: block;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 17px;
-    font-weight: 700;
-    text-decoration: underline;
-  }
-  .vv-mobile-bar__price span { font-size: 13px; color: var(--vv-text-muted); }
   .vv-mobile-bar__cta {
     display: inline-flex;
     align-items: center;
