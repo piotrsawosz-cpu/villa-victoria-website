@@ -8,25 +8,32 @@
 <meta name="description" content="A 3-bedroom villa above Roses, Costa Brava — panoramic Gulf of Roses views, private pool, jacuzzi, sauna. Sleeps up to 10. Direct booking from €1,300/night."/>
 <link rel="icon" href="brand/favicon.svg" type="image/svg+xml"/>
 <link rel="stylesheet" href="book.css"/>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5R9R4TBZ');</script>
+<!-- End Google Tag Manager -->
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5R9R4TBZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <!-- ============ HEADER ============ -->
 <header class="vv-header">
   <div class="vv-header__inner">
     <a href="/" class="vv-header__logo">
-      <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
-        <path d="M16 1C9.92 1 5 5.92 5 12c0 7.9 9.43 17.2 10.41 18.16a.84.84 0 0 0 1.18 0C17.57 29.2 27 19.9 27 12c0-6.08-4.92-11-11-11Zm0 15a4 4 0 1 1 0-8 4 4 0 0 1 0 8Z"/>
-      </svg>
-      Villa Victoria
+      <img class="vv-header__logo-img vv-header__logo-img--light" src="brand/logo-horizontal.svg" alt="Villa Victoria"/>
+      <img class="vv-header__logo-img vv-header__logo-img--inverse" src="brand/logo-horizontal-inverse.svg" alt="" aria-hidden="true"/>
     </a>
 
-    <a class="vv-header__cta"
-       href="https://wa.me/34692852918?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20availability%20and%20price%20for%20Villa%20Victoria"
-       target="_blank" rel="noopener">
+    <button class="vv-header__cta" type="button" data-vv-open-lead-modal>
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.711.306 1.265.489 1.697.626.713.226 1.362.194 1.875.118.572-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
-      <span>Message Piotr on WhatsApp</span>
-    </a>
+      <span>Message Piotr on WhatsApp to book</span>
+    </button>
   </div>
 </header>
 
@@ -41,6 +48,13 @@
   <section class="vv-hero">
     <div class="vv-hero__tile vv-hero__tile--main">
       <img class="vv-hero__img" src="media/gallery/pool-terrace.webp" alt="Pool terrace at Villa Victoria — infinity edge overlooking the Gulf of Roses"/>
+      <button class="vv-hero__show-all vv-hero__show-all--mobile" id="vv-show-all-btn-mobile" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        Show all photos
+      </button>
+      <div class="vv-hero__title-overlay" aria-hidden="true">
+        <p class="vv-hero__title-overlay-text">Villa Victoria · Luxury 3-bedroom villa with sea views</p>
+      </div>
     </div>
     <div class="vv-hero__tile">
       <img class="vv-hero__img" src="media/gallery/jacuzzi.webp" alt="Jacuzzi with sea view at Villa Victoria"/>
@@ -53,32 +67,10 @@
     </div>
     <div class="vv-hero__tile">
       <img class="vv-hero__img" src="media/gallery/bedroom1.webp" alt="Master bedroom at Villa Victoria"/>
-      <button class="vv-hero__show-all">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      <button class="vv-hero__show-all vv-hero__show-all--desktop" id="vv-show-all-btn" type="button">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
         Show all photos
       </button>
-    </div>
-  </section>
-
-  <!-- ============ HOST CTA — drives FB lead-gen messages ============ -->
-  <section class="vv-host-cta" id="contact-peter">
-    <div class="vv-host-cta__inner">
-      <img class="vv-host-cta__avatar" src="media/piotr.webp" alt="Piotr — your host at Villa Victoria"/>
-      <div class="vv-host-cta__body">
-        <p class="vv-host-cta__name">Hi, I'm Piotr — your host</p>
-        <p class="vv-host-cta__text">Eldest son of the owner. Send me a quick message — I usually reply within an hour.</p>
-      </div>
-      <div class="vv-host-cta__actions">
-        <a class="vv-host-cta__btn vv-host-cta__btn--whatsapp"
-           href="https://wa.me/34692852918?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20availability%20and%20price%20for%20Villa%20Victoria"
-           target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.711.306 1.265.489 1.697.626.713.226 1.362.194 1.875.118.572-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
-          Message on WhatsApp
-        </a>
-        <a class="vv-host-cta__btn vv-host-cta__btn--phone" href="tel:+34692852918">
-          +34 692 852 918
-        </a>
-      </div>
     </div>
   </section>
 
@@ -90,8 +82,9 @@
 
       <!-- Meta -->
       <section class="vv-meta">
+        <p class="vv-meta__headline">Villa Victoria · Luxury 3-bedroom villa with sea views</p>
         <h2 class="vv-meta__title">Entire villa in Roses, Costa Brava, Spain</h2>
-        <div class="vv-meta__sub">6 guests (+2) · 3 bedrooms · 3 beds (+1 sofa bed) · 3 bathrooms</div>
+        <div class="vv-meta__sub">6 guests: +2 · 3 bedrooms · 3 beds: +1 sofa bed · 3 bathrooms</div>
       </section>
 
       <!-- Roses favorite badge -->
@@ -223,25 +216,6 @@
             Pets not allowed
           </div>
         </div>
-      </section>
-
-      <!-- Calendar -->
-      <section class="vv-section vv-cal">
-        <h2 class="vv-cal__heading">2 nights in Roses</h2>
-        <p class="vv-cal__sub">May 29, 2026 – May 31, 2026</p>
-        <div class="vv-cal__grids">
-          <div class="vv-cal__month">
-            <p class="vv-cal__month-title">May 2026</p>
-            <div class="vv-cal__dows"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
-            <div class="vv-cal__days" id="cal-may"></div>
-          </div>
-          <div class="vv-cal__month">
-            <p class="vv-cal__month-title">June 2026</p>
-            <div class="vv-cal__dows"><span>S</span><span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span></div>
-            <div class="vv-cal__days" id="cal-jun"></div>
-          </div>
-        </div>
-        <a href="#" class="vv-cal__clear">Clear dates</a>
       </section>
 
       <!-- Reviews -->
@@ -382,51 +356,9 @@
         </div>
       </section>
 
-      <!-- Meet your host -->
-      <section class="vv-section vv-host-section">
-        <h2>Meet your host</h2>
-        <div class="vv-host">
-          <div class="vv-host__card">
-            <img class="vv-host__photo" src="media/piotr.webp" alt="Piotr — your host at Villa Victoria"/>
-            <p class="vv-host__name">Piotr</p>
-            <p class="vv-host__tag">Your contact at Villa Victoria</p>
-            <div class="vv-host__stats">
-              <div><span class="vv-host__stat-num">9</span><div class="vv-host__stat-label">Reviews</div></div>
-              <div><span class="vv-host__stat-num">★ 4.9</span><div class="vv-host__stat-label">Rating</div></div>
-              <div><span class="vv-host__stat-num">7+</span><div class="vv-host__stat-label">Years hosting</div></div>
-            </div>
-          </div>
-          <div class="vv-host__bio">
-            <h3>Hi, I'm Piotr</h3>
-            <p>I'm the eldest son of the owner of Villa Victoria. I'll be happy to help you with your stay — answering questions, suggesting the best beaches and restaurants, and making sure everything is ready before you arrive.</p>
-            <p>Response rate: <strong>100%</strong> · usually replies within an hour.</p>
-            <div class="vv-host__bio-tags">
-              <div class="vv-host__bio-tag">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a8 8 0 0 1 16 0v1"/></svg>
-                Family-managed — you always hear back from us, not a call centre.
-              </div>
-              <div class="vv-host__bio-tag">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
-                Roses local team · knows every road, beach, and restaurant.
-              </div>
-              <div class="vv-host__bio-tag">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
-                English, Spanish, Polish, and Russian — message anytime.
-              </div>
-            </div>
-            <a class="vv-host__msg-btn"
-               href="https://wa.me/34692852918?text=Hi%20Piotr%2C%20I'd%20like%20to%20ask%20about%20Villa%20Victoria"
-               target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.711.306 1.265.489 1.697.626.713.226 1.362.194 1.875.118.572-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
-              Message Piotr on WhatsApp
-            </a>
-          </div>
-        </div>
-      </section>
-
     </div>
 
-    <!-- ===== RIGHT COLUMN: CONTACT PIOTR CARD ===== -->
+    <!-- ===== RIGHT COLUMN: HOST BIO CARD ===== -->
     <aside class="vv-book-wrap" id="book">
       <div class="vv-book">
         <div class="vv-book__hostpic">
@@ -439,40 +371,36 @@
           <a href="#reviews" class="reviews">9 reviews</a>
         </div>
 
-        <div class="vv-book__fields">
-          <div class="vv-book__row">
-            <div class="vv-book__field">
-              <div class="vv-book__field-label">Check-in</div>
-              <div class="vv-book__field-value">Add date</div>
-            </div>
-            <div class="vv-book__field">
-              <div class="vv-book__field-label">Checkout</div>
-              <div class="vv-book__field-value">Add date</div>
-            </div>
-          </div>
-          <div class="vv-book__row">
-            <div class="vv-book__field vv-book__guests">
-              <div>
-                <div class="vv-book__field-label">Guests</div>
-                <div class="vv-book__field-value">Add guests</div>
-              </div>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </div>
+        <p class="vv-book__bio vv-book__bio--response">Response rate: <strong>100%</strong> · usually replies within an hour.</p>
+        <p class="vv-book__bio">I'm the eldest son of the owner of Villa Victoria. I'll be happy to help you with your stay — answering questions, suggesting the best beaches and restaurants, and making sure everything is ready before you arrive.</p>
+
+        <div class="vv-book__bio-tags">
+          <div class="vv-host__bio-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            English, Spanish, Polish, and Russian — message anytime.
           </div>
         </div>
 
-        <a class="vv-book__cta"
-           href="https://wa.me/34692852918?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20availability%20and%20price%20for%20Villa%20Victoria"
-           target="_blank" rel="noopener">
+        <button class="vv-book__cta" type="button" data-vv-open-lead-modal>
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.711.306 1.265.489 1.697.626.713.226 1.362.194 1.875.118.572-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
           Message Piotr on WhatsApp
-        </a>
-        <p class="vv-book__charge">Usually replies within an hour</p>
+        </button>
       </div>
     </aside>
 
   </div>
 </main>
+
+<!-- ============ MOBILE STICKY BOTTOM BAR ============ -->
+<div class="vv-mobile-bar" aria-hidden="false">
+  <div class="vv-mobile-bar__price">
+    <strong>€1,300</strong> <span>/ night</span>
+  </div>
+  <button class="vv-mobile-bar__cta" type="button" data-vv-open-lead-modal>
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.711.306 1.265.489 1.697.626.713.226 1.362.194 1.875.118.572-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
+    Message on WhatsApp
+  </button>
+</div>
 
 <!-- ============ FOOTER (mirrors main site) ============ -->
 <footer class="vv-footer">
@@ -515,37 +443,408 @@
   </div>
 </footer>
 
-<!-- ============ INLINE JS: calendar grid generator ============ -->
+<!-- ============ PHOTO TOUR OVERLAY ============ -->
+<div id="vv-tour" class="vv-tour" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-label="Photo tour">
+  <header class="vv-tour__topbar">
+    <button class="vv-tour__close" id="vv-tour-close" type="button" aria-label="Close photo tour">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    </button>
+    <h2 class="vv-tour__title">Photo tour</h2>
+    <span aria-hidden="true"></span>
+  </header>
+  <div class="vv-tour__nav-wrap" id="vv-tour-nav-wrap">
+    <button class="vv-tour__nav-arrow vv-tour__nav-arrow--left" id="vv-tour-nav-arrow-left" type="button" aria-label="Show earlier sections">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+    </button>
+    <nav class="vv-tour__nav" id="vv-tour-nav" aria-label="Sections"></nav>
+    <button class="vv-tour__nav-arrow vv-tour__nav-arrow--right" id="vv-tour-nav-arrow" type="button" aria-label="Show more sections">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+    </button>
+  </div>
+  <div class="vv-tour__body" id="vv-tour-body"></div>
+</div>
+
+<!-- ============ LIGHTBOX ============ -->
+<div id="vv-lightbox" class="vv-lightbox" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-label="Photo">
+  <button class="vv-lightbox__close" id="vv-lightbox-close" type="button" aria-label="Close photo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+  </button>
+  <button class="vv-lightbox__nav vv-lightbox__nav--prev" id="vv-lightbox-prev" type="button" aria-label="Previous photo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+  <img id="vv-lightbox-img" class="vv-lightbox__img" src="" alt=""/>
+  <button class="vv-lightbox__nav vv-lightbox__nav--next" id="vv-lightbox-next" type="button" aria-label="Next photo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+  </button>
+  <div class="vv-lightbox__counter" id="vv-lightbox-counter">1 / 1</div>
+</div>
+
 <script>
 (function () {
-  // Build May 2026: starts Friday (May 1) and has 31 days. Sunday-start grid.
-  function buildMonth(containerId, year, month, blocked) {
-    var el = document.getElementById(containerId);
-    if (!el) return;
-    var firstDay = new Date(year, month, 1).getDay();  // 0 = Sun
-    var daysInMonth = new Date(year, month + 1, 0).getDate();
-    var prevMonthDays = new Date(year, month, 0).getDate();
-    var html = '';
+  'use strict';
 
-    // Leading empty/out-of-month cells
-    for (var i = firstDay - 1; i >= 0; i--) {
-      html += '<div class="vv-cal__day vv-cal__day--out">' + (prevMonthDays - i) + '</div>';
+  var SECTIONS = [
+    { id: 'pool',     title: 'Pool & terrace',   sub: 'Infinity edge',             photos: [['pool-terrace.webp',     'Pool terrace overlooking the Gulf of Roses'], ['pool-loungers.webp', 'Pool loungers'], ['pool-mosaic.webp', 'Pool with mosaic detail'], ['pool-breakfast.webp', 'Breakfast by the pool']] },
+    { id: 'views',    title: 'BBQ & views',      sub: 'Outdoor BBQ + Gulf views',  photos: [['bbq.webp',              'Outdoor BBQ area'], ['eagle-view.webp', 'Panoramic Gulf of Roses view from the villa']] },
+    { id: 'jacuzzi',  title: 'Jacuzzi',          sub: 'Sea view',                  photos: [['jacuzzi.webp',          'Jacuzzi with sea view']] },
+    { id: 'sauna',    title: 'Sauna',            sub: 'Finnish sauna',             photos: [['sauna.webp',            'Finnish sauna']] },
+    { id: 'living',   title: 'Living room',      sub: 'Sea views, fireplace',      photos: [['living-fireplace.webp', 'Living room with fireplace'], ['living-chess.webp', 'Living room — chess table']] },
+    { id: 'kitchen',  title: 'Kitchen & dining', sub: 'Fully equipped',            photos: [['kitchen.webp',          'Kitchen'], ['kitchen-dining.webp', 'Kitchen and dining area with sea view']] },
+    { id: 'cinema',   title: 'Home cinema',      sub: '',                          photos: [['cinema.webp',           'Home cinema room']] },
+    { id: 'bed1',     title: 'Bedroom 1',        sub: '1 king bed',                photos: [['bedroom1.webp',         'Bedroom 1 — master with sea view']] },
+    { id: 'bed2',     title: 'Bedroom 2',        sub: '1 queen bed',               photos: [['bedroom2.webp',         'Bedroom 2']] },
+    { id: 'bed3',     title: 'Bedroom 3',        sub: '1 king bed · 1 sofa bed',   photos: [['bedroom3.webp',         'Bedroom 3'], ['bedroom3-alt.webp', 'Bedroom 3 — alternate view']] },
+    { id: 'bath1',    title: 'Bathroom 1',       sub: '',                          photos: [['bathroom1.webp',        'Bathroom 1']] },
+    { id: 'bath2',    title: 'Bathroom 2',       sub: '',                          photos: [['bathroom2.webp',        'Bathroom 2']] },
+    { id: 'bath3',    title: 'Bathroom 3',       sub: '',                          photos: [['bathroom3.webp',        'Bathroom 3'], ['bathroom3-alt.webp', 'Bathroom 3 — alternate view']] },
+    { id: 'hallway',  title: 'Hallway',          sub: '',                          photos: [['hallway.webp',          'Hallway']] },
+    { id: 'entrance', title: 'Entrance',         sub: '',                          photos: [['entrance.webp',         'Entrance']] }
+  ];
+
+  var BASE = 'media/gallery/';
+
+  var triggers     = Array.prototype.slice.call(document.querySelectorAll('.vv-hero__show-all'));
+  var tour         = document.getElementById('vv-tour');
+  var tourClose    = document.getElementById('vv-tour-close');
+  var tourNavWrap      = document.getElementById('vv-tour-nav-wrap');
+  var tourNav          = document.getElementById('vv-tour-nav');
+  var tourNavArrow     = document.getElementById('vv-tour-nav-arrow');
+  var tourNavArrowLeft = document.getElementById('vv-tour-nav-arrow-left');
+  var tourBody     = document.getElementById('vv-tour-body');
+  var lightbox     = document.getElementById('vv-lightbox');
+  var lightboxImg  = document.getElementById('vv-lightbox-img');
+  var lightboxPrev = document.getElementById('vv-lightbox-prev');
+  var lightboxNext = document.getElementById('vv-lightbox-next');
+  var lightboxClose= document.getElementById('vv-lightbox-close');
+  var lightboxCount= document.getElementById('vv-lightbox-counter');
+
+  var built = false;
+  var flatPhotos = [];
+  var navLinks = [];
+  var sectionEls = [];
+  var observer = null;
+  var lbIndex = 0;
+  var lastFocus = null;
+
+  function build() {
+    if (built) return;
+    built = true;
+
+    var navHTML = '';
+    var bodyHTML = '';
+
+    SECTIONS.forEach(function (sec) {
+      var firstPhoto = sec.photos[0];
+      var thumbSrc = BASE + firstPhoto[0];
+      navHTML += '<a href="#vt-sec-' + sec.id + '" data-target="vt-sec-' + sec.id + '">' +
+        '<img src="' + thumbSrc + '" alt="" loading="lazy"/>' +
+        '<span>' + sec.title + '</span></a>';
+
+      var count = sec.photos.length;
+      var solo = count === 1;
+      var withHero = count >= 3;
+      var photosHTML = '';
+      sec.photos.forEach(function (p, i) {
+        var src = BASE + p[0];
+        var alt = p[1];
+        var idx = flatPhotos.length;
+        flatPhotos.push({ src: src, alt: alt });
+        var heroCls = (withHero && i === 0) ? ' vv-tour__photo--hero' : '';
+        photosHTML += '<img class="vv-tour__photo' + heroCls + '" src="' + src + '" alt="' + alt + '" loading="lazy" data-idx="' + idx + '"/>';
+      });
+
+      bodyHTML +=
+        '<section id="vt-sec-' + sec.id + '" class="vv-tour__section">' +
+          '<header class="vv-tour__sec-head"><h3>' + sec.title + '</h3>' +
+            (sec.sub ? '<p>' + sec.sub + '</p>' : '') +
+          '</header>' +
+          '<div class="vv-tour__sec-photos' + (solo ? ' vv-tour__sec-photos--solo' : '') + '">' +
+            photosHTML +
+          '</div>' +
+        '</section>';
+    });
+
+    tourNav.innerHTML = navHTML;
+    tourBody.innerHTML = bodyHTML;
+
+    navLinks = Array.prototype.slice.call(tourNav.querySelectorAll('a'));
+    sectionEls = Array.prototype.slice.call(tourBody.querySelectorAll('.vv-tour__section'));
+
+    navLinks.forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+        var target = document.getElementById(a.getAttribute('data-target'));
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    tourBody.addEventListener('click', function (e) {
+      var t = e.target;
+      if (t && t.classList && t.classList.contains('vv-tour__photo')) {
+        var idx = parseInt(t.getAttribute('data-idx'), 10);
+        if (!isNaN(idx)) openLightbox(idx);
+      }
+    });
+
+    if ('IntersectionObserver' in window) {
+      observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.id;
+            navLinks.forEach(function (a) {
+              var active = a.getAttribute('data-target') === id;
+              a.classList.toggle('is-active', active);
+              if (active) a.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+            });
+          }
+        });
+      }, { root: tourBody, rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+      sectionEls.forEach(function (s) { observer.observe(s); });
     }
-    // In-month days
-    for (var d = 1; d <= daysInMonth; d++) {
-      var cls = 'vv-cal__day';
-      if (blocked.indexOf(d) !== -1) cls += ' vv-cal__day--blocked';
-      html += '<div class="' + cls + '" data-d="' + d + '">' + d + '</div>';
-    }
-    el.innerHTML = html;
+
+    updateNavEnd();
+    tourNav.addEventListener('scroll', updateNavEnd);
+    window.addEventListener('resize', updateNavEnd);
   }
-  buildMonth('cal-may', 2026, 4, [3, 4, 5, 12, 13, 19, 20, 21]);  // May 2026
-  buildMonth('cal-jun', 2026, 5, [6, 7, 14, 15, 16, 22, 23]);     // June 2026
 
-  // Mark selected dates (May 29 + May 30 = 2-night example)
-  document.querySelectorAll('#cal-may [data-d]').forEach(function (n) {
-    var d = +n.dataset.d;
-    if (d === 29 || d === 30) n.classList.add('vv-cal__day--selected');
+  function updateNavEnd() {
+    if (!tourNavWrap || !tourNav) return;
+    var maxScroll = tourNav.scrollWidth - tourNav.clientWidth;
+    var atEnd = maxScroll <= 1 || tourNav.scrollLeft >= maxScroll - 4;
+    var atStart = tourNav.scrollLeft <= 4;
+    tourNavWrap.classList.toggle('is-end', atEnd);
+    tourNavWrap.classList.toggle('is-start', atStart);
+  }
+
+  function openTour() {
+    build();
+    lastFocus = document.activeElement;
+    tour.hidden = false;
+    tour.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('vv-tour-open');
+    tourBody.scrollTop = 0;
+    if (navLinks[0]) {
+      navLinks.forEach(function (a) { a.classList.remove('is-active'); });
+      navLinks[0].classList.add('is-active');
+    }
+    setTimeout(function () { tourClose.focus(); }, 0);
+  }
+
+  function closeTour() {
+    if (!lightbox.hidden) closeLightbox();
+    tour.hidden = true;
+    tour.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('vv-tour-open');
+    if (lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus();
+  }
+
+  function openLightbox(idx) {
+    lbIndex = idx;
+    renderLightbox();
+    lightbox.hidden = false;
+    lightbox.setAttribute('aria-hidden', 'false');
+    setTimeout(function () { lightboxClose.focus(); }, 0);
+  }
+
+  function closeLightbox() {
+    lightbox.hidden = true;
+    lightbox.setAttribute('aria-hidden', 'true');
+  }
+
+  function renderLightbox() {
+    var p = flatPhotos[lbIndex];
+    if (!p) return;
+    lightboxImg.src = p.src;
+    lightboxImg.alt = p.alt;
+    lightboxCount.textContent = (lbIndex + 1) + ' / ' + flatPhotos.length;
+  }
+
+  function lbPrev() { lbIndex = (lbIndex - 1 + flatPhotos.length) % flatPhotos.length; renderLightbox(); }
+  function lbNext() { lbIndex = (lbIndex + 1) % flatPhotos.length; renderLightbox(); }
+
+  triggers.forEach(function (t) { t.addEventListener('click', openTour); });
+  if (tourClose) tourClose.addEventListener('click', closeTour);
+  if (tourNavArrow) tourNavArrow.addEventListener('click', function () {
+    tourNav.scrollBy({ left: Math.max(240, tourNav.clientWidth * 0.7), behavior: 'smooth' });
+  });
+  if (tourNavArrowLeft) tourNavArrowLeft.addEventListener('click', function () {
+    tourNav.scrollBy({ left: -Math.max(240, tourNav.clientWidth * 0.7), behavior: 'smooth' });
+  });
+  if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+  if (lightboxPrev) lightboxPrev.addEventListener('click', lbPrev);
+  if (lightboxNext) lightboxNext.addEventListener('click', lbNext);
+
+  lightbox.addEventListener('click', function (e) {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (!lightbox.hidden) {
+      if (e.key === 'Escape') { e.preventDefault(); closeLightbox(); }
+      else if (e.key === 'ArrowLeft')  { e.preventDefault(); lbPrev(); }
+      else if (e.key === 'ArrowRight') { e.preventDefault(); lbNext(); }
+      return;
+    }
+    if (!tour.hidden && e.key === 'Escape') { e.preventDefault(); closeTour(); }
+  });
+})();
+</script>
+
+<!-- ============ LEAD-CAPTURE MODAL ============ -->
+<dialog id="vv-lead-modal" class="vv-lead-modal" aria-labelledby="vv-lead-modal-title">
+  <button class="vv-lead-modal__close" type="button" data-vv-close-lead-modal aria-label="Close">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+  </button>
+  <h2 id="vv-lead-modal-title" class="vv-lead-modal__title">Message Piotr on WhatsApp</h2>
+  <p class="vv-lead-modal__sub">Leave your details and we'll connect you to Piotr in a moment.</p>
+  <form id="vv-lead-form" class="vv-lead-form" novalidate>
+    <label class="vv-lead-form__field">
+      <span class="vv-lead-form__label">Your name</span>
+      <input type="text" name="name" autocomplete="name" required>
+      <span class="vv-lead-form__error" data-error-for="name"></span>
+    </label>
+    <label class="vv-lead-form__field">
+      <span class="vv-lead-form__label">Email address</span>
+      <input type="email" name="email" autocomplete="email" required>
+      <span class="vv-lead-form__error" data-error-for="email"></span>
+    </label>
+    <label class="vv-lead-form__field">
+      <span class="vv-lead-form__label">Phone number</span>
+      <input type="tel" name="phone" autocomplete="tel" required>
+      <span class="vv-lead-form__error" data-error-for="phone"></span>
+    </label>
+    <button type="submit" class="vv-lead-form__submit">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 0 1-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 0 1 8.413 3.488 11.824 11.824 0 0 1 3.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 0 1-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.711.306 1.265.489 1.697.626.713.226 1.362.194 1.875.118.572-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/></svg>
+      <span>Continue to WhatsApp</span>
+    </button>
+    <p class="vv-lead-form__fineprint">We only use your details to follow up about your stay.</p>
+  </form>
+</dialog>
+
+<script>
+(function () {
+  'use strict';
+
+  var WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/BXeBSKdYVT8q7BB0HEte/webhook-trigger/a0459bb4-a64e-44f1-b8aa-3a765878ec41';
+
+  var modal    = document.getElementById('vv-lead-modal');
+  var form     = document.getElementById('vv-lead-form');
+  if (!modal || !form) return;
+
+  var openers  = document.querySelectorAll('[data-vv-open-lead-modal]');
+  var closers  = modal.querySelectorAll('[data-vv-close-lead-modal]');
+  var supportsDialog = typeof modal.showModal === 'function';
+
+  function openModal() {
+    if (supportsDialog) {
+      modal.showModal();
+    } else {
+      modal.setAttribute('open', '');
+      modal.classList.add('is-fallback-open');
+    }
+    var firstInput = form.querySelector('input[name="name"]');
+    if (firstInput) setTimeout(function () { firstInput.focus(); }, 0);
+  }
+
+  function closeModal() {
+    if (supportsDialog && modal.open) {
+      modal.close();
+    } else {
+      modal.removeAttribute('open');
+      modal.classList.remove('is-fallback-open');
+    }
+    clearErrors();
+  }
+
+  function clearErrors() {
+    form.querySelectorAll('.vv-lead-form__error').forEach(function (el) { el.textContent = ''; });
+    form.querySelectorAll('input').forEach(function (el) { el.classList.remove('has-error'); });
+  }
+
+  function setError(name, msg) {
+    var err = form.querySelector('[data-error-for="' + name + '"]');
+    var input = form.querySelector('input[name="' + name + '"]');
+    if (err) err.textContent = msg;
+    if (input) input.classList.add('has-error');
+  }
+
+  function validate(data) {
+    clearErrors();
+    var ok = true;
+    if (!data.name) { setError('name', 'Please enter your name.'); ok = false; }
+    if (!data.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
+      setError('email', 'Please enter a valid email.'); ok = false;
+    }
+    var phoneDigits = (data.phone || '').replace(/\D/g, '');
+    if (phoneDigits.length < 6) { setError('phone', 'Please enter a valid phone number.'); ok = false; }
+    return ok;
+  }
+
+  openers.forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      openModal();
+    });
+  });
+
+  closers.forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      closeModal();
+    });
+  });
+
+  modal.addEventListener('click', function (e) {
+    if (e.target === modal) closeModal();
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var fd = new FormData(form);
+    var data = {
+      name:  (fd.get('name')  || '').toString().trim(),
+      email: (fd.get('email') || '').toString().trim(),
+      phone: (fd.get('phone') || '').toString().trim()
+    };
+    if (!validate(data)) return;
+
+    var payload = {
+      name: data.name,
+      email: data.email,
+      phone: data.phone,
+      source: 'book-page',
+      page_url: window.location.href,
+      ts: new Date().toISOString()
+    };
+
+    try {
+      var blob = new Blob([JSON.stringify(payload)], { type: 'application/json' });
+      var sent = navigator.sendBeacon && navigator.sendBeacon(WEBHOOK_URL, blob);
+      if (!sent) {
+        fetch(WEBHOOK_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+          keepalive: true,
+          mode: 'no-cors'
+        }).catch(function () {});
+      }
+    } catch (err) {
+      try {
+        fetch(WEBHOOK_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+          keepalive: true,
+          mode: 'no-cors'
+        }).catch(function () {});
+      } catch (e2) {}
+    }
+
+    var firstName = data.name.split(/\s+/)[0] || '';
+    try { sessionStorage.setItem('vv_lead_name', firstName); } catch (e) {}
+
+    window.location.assign('/contact-confirmation');
   });
 })();
 </script>
