@@ -134,6 +134,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     if (countdownEl && remaining >= 0) countdownEl.textContent = String(remaining);
     if (remaining <= 0) clearInterval(tickInterval);
   }, 1000);
+
+  setTimeout(function () {
+    try { sessionStorage.removeItem('vv_lead_name'); } catch (e) {}
+    window.location.assign(waUrl);
+  }, REDIRECT_MS);
 })();
 </script>
 
