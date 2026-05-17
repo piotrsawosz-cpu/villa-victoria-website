@@ -364,6 +364,19 @@ h3 { font-size: 17px; font-weight: 600; }
 }
 .vv-desc__more:hover { color: var(--vv-terracotta); }
 
+/* Location anchor links — scroll to map */
+.vv-loc-link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--vv-border-soft);
+  text-underline-offset: 3px;
+  transition: color 0.15s, text-decoration-color 0.15s;
+}
+.vv-loc-link:hover {
+  color: var(--vv-terracotta);
+  text-decoration-color: currentColor;
+}
+
 /* Where you'll sleep */
 .vv-sleep__grid {
   display: grid;
@@ -706,6 +719,24 @@ h3 { font-size: 17px; font-weight: 600; }
 .vv-book__bio-tags .vv-host__bio-tag {
   font-size: 13px;
   padding: 8px 10px;
+}
+.vv-host__langs {
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px 12px;
+  font-size: 13px;
+}
+.vv-host__langs li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.vv-host__lang-flag {
+  font-size: 18px;
+  line-height: 1;
 }
 .vv-book__cta {
   display: flex;
