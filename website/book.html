@@ -46,7 +46,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- ============ HERO: Airbnb-style 1 big + 4 small ============ -->
   <section class="vv-hero">
-    <div class="vv-hero__tile vv-hero__tile--main">
+    <div class="vv-hero__tile vv-hero__tile--main" data-tour-section="pool">
       <img class="vv-hero__img" src="media/gallery/pool-terrace.webp" alt="Pool terrace at Villa Victoria — infinity edge overlooking the Gulf of Roses"/>
       <button class="vv-hero__show-all vv-hero__show-all--mobile" id="vv-show-all-btn-mobile" type="button">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
@@ -56,16 +56,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <p class="vv-hero__title-overlay-text">Villa Victoria · Luxury 3-bedroom villa with sea views</p>
       </div>
     </div>
-    <div class="vv-hero__tile">
+    <div class="vv-hero__tile" data-tour-section="jacuzzi">
       <img class="vv-hero__img" src="media/gallery/jacuzzi.webp" alt="Jacuzzi with sea view at Villa Victoria"/>
     </div>
-    <div class="vv-hero__tile">
+    <div class="vv-hero__tile" data-tour-section="living">
       <img class="vv-hero__img" src="media/gallery/living-fireplace.webp" alt="Living room with fireplace at Villa Victoria"/>
     </div>
-    <div class="vv-hero__tile">
+    <div class="vv-hero__tile" data-tour-section="kitchen">
       <img class="vv-hero__img" src="media/gallery/kitchen-dining.webp" alt="Kitchen and dining area at Villa Victoria"/>
     </div>
-    <div class="vv-hero__tile">
+    <div class="vv-hero__tile" data-tour-section="bed1">
       <img class="vv-hero__img" src="media/gallery/bedroom1.webp" alt="Master bedroom at Villa Victoria"/>
       <button class="vv-hero__show-all vv-hero__show-all--desktop" id="vv-show-all-btn" type="button">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
@@ -500,7 +500,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   var BASE = 'media/gallery/';
 
-  var triggers     = Array.prototype.slice.call(document.querySelectorAll('.vv-hero__show-all, .vv-sleep__card'));
+  var triggers     = Array.prototype.slice.call(document.querySelectorAll('.vv-hero__show-all, .vv-sleep__card, .vv-hero__tile[data-tour-section]'));
   var tour         = document.getElementById('vv-tour');
   var tourClose    = document.getElementById('vv-tour-close');
   var tourNavWrap      = document.getElementById('vv-tour-nav-wrap');
@@ -672,7 +672,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   function lbNext() { lbIndex = (lbIndex + 1) % flatPhotos.length; renderLightbox(); }
 
   triggers.forEach(function (t) {
-    t.addEventListener('click', function () {
+    t.addEventListener('click', function (e) {
+      var btn = e.target.closest && e.target.closest('button');
+      if (btn && btn !== t) return;
       openTour(t.getAttribute('data-tour-section'));
     });
   });

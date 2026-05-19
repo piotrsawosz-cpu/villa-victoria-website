@@ -281,28 +281,6 @@ h3 { font-size: 17px; font-weight: 600; }
   text-align: center;
   position: relative;
 }
-.vv-favorite__center::before,
-.vv-favorite__center::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  width: 14px;
-  height: 46px;
-  border: 2px solid var(--vv-text);
-  border-top: none;
-  border-bottom: none;
-  transform: translateY(-50%);
-}
-.vv-favorite__center::before {
-  left: -18px;
-  border-right: none;
-  border-radius: 60% 0 0 60% / 50% 0 0 50%;
-}
-.vv-favorite__center::after {
-  right: -18px;
-  border-left: none;
-  border-radius: 0 60% 60% 0 / 0 50% 50% 0;
-}
 .vv-favorite__label {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
@@ -872,7 +850,6 @@ h3 { font-size: 17px; font-weight: 600; }
   .vv-tothink__grid { grid-template-columns: 1fr; }
   .vv-footer__grid { grid-template-columns: 1fr 1fr; }
   .vv-favorite { grid-template-columns: 1fr; gap: 16px; text-align: center; }
-  .vv-favorite__center::before, .vv-favorite__center::after { display: none; }
 }
 
 /* ============================================================
@@ -978,7 +955,7 @@ h3 { font-size: 17px; font-weight: 600; }
     margin: 0;
   }
 
-  /* ----- Roses favorite badge: horizontal, no laurel brackets ----- */
+  /* ----- Roses favorite badge: horizontal ----- */
   .vv-favorite {
     grid-template-columns: 1fr auto 1fr;
     gap: 16px;
@@ -986,8 +963,6 @@ h3 { font-size: 17px; font-weight: 600; }
     margin: 20px 0;
     text-align: left;
   }
-  .vv-favorite__center::before,
-  .vv-favorite__center::after { display: none; }
   .vv-favorite__label { font-size: 14px; }
   .vv-favorite__sub { font-size: 11px; }
   .vv-favorite__stat-num { font-size: 18px; }
