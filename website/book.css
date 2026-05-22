@@ -897,7 +897,7 @@ h3 { font-size: 17px; font-weight: 600; }
   .vv-body { grid-template-columns: minmax(0, 1fr); }
   .vv-body > div { min-width: 0; }
 
-  /* ----- Header: transparent overlay, centered inverse logo, no CTA ----- */
+  /* ----- Header: transparent overlay, left-aligned inverse logo, no CTA ----- */
   .vv-header {
     position: absolute;
     top: 0;
@@ -909,8 +909,8 @@ h3 { font-size: 17px; font-weight: 600; }
     padding: 12px 0;
     z-index: 50;
   }
-  .vv-header__inner { justify-content: center; gap: 0; }
-  .vv-header__logo { margin: 0 auto; }
+  .vv-header__inner { justify-content: flex-start; gap: 0; }
+  .vv-header__logo { margin: 0; }
   .vv-header__logo-img--light { display: none; }
   .vv-header__logo-img--inverse {
     display: block;
