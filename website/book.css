@@ -378,6 +378,41 @@ h3 { font-size: 17px; font-weight: 600; }
 .vv-sleep__name { font-weight: 600; font-size: 15px; margin: 0 0 2px; }
 .vv-sleep__bed { font-size: 14px; color: var(--vv-text-muted); margin: 0; }
 
+/* Explore the rest of the villa — scrollable space cards */
+.vv-explore__grid {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  margin: 0 -4px;
+  padding: 4px 4px 10px;
+}
+.vv-explore__grid::-webkit-scrollbar { display: none; }
+.vv-explore__card {
+  flex: 0 0 240px;
+  scroll-snap-align: start;
+  border: 1px solid var(--vv-border-soft);
+  border-radius: var(--vv-radius-md);
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.vv-explore__card:hover {
+  box-shadow: var(--vv-shadow-card);
+  transform: translateY(-2px);
+}
+.vv-explore__img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+.vv-explore__body { padding: 14px 16px 18px; }
+.vv-explore__name { font-weight: 600; font-size: 15px; margin: 0 0 2px; color: var(--vv-text); }
+.vv-explore__sub  { font-size: 14px; color: var(--vv-text-muted); margin: 0; }
+
 /* Amenities grid */
 .vv-amen__grid {
   display: grid;
@@ -1007,6 +1042,14 @@ h3 { font-size: 17px; font-weight: 600; }
   .vv-sleep__body { padding: 12px 14px 14px; }
   .vv-sleep__name { font-size: 14px; }
   .vv-sleep__bed { font-size: 13px; }
+
+  /* ----- Explore cards: edge-to-edge scroll ----- */
+  .vv-explore__grid { gap: 12px; margin: 0 -16px; padding: 4px 16px 8px; }
+  .vv-explore__card { flex: 0 0 68vw; max-width: 260px; }
+  .vv-explore__img  { height: 140px; }
+  .vv-explore__body { padding: 12px 14px 14px; }
+  .vv-explore__name { font-size: 14px; }
+  .vv-explore__sub  { font-size: 13px; }
 
   /* ----- Amenities: single column tight ----- */
   .vv-amen__grid {
