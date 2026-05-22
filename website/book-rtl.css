@@ -1,0 +1,50 @@
+/* ============================================================
+   /book-ar — right-to-left overrides for the Arabic booking page
+   Layered on top of book.css. Loaded only by book-ar.html.
+   dir="rtl" on <html> mirrors all flex/grid layout automatically;
+   this file only fixes what physical properties cannot.
+   ============================================================ */
+
+/* ---------- Arabic typeface ---------- */
+body { font-family: 'Cairo', 'Inter', sans-serif; }
+h1, h2, h3, h4,
+.vv-meta__headline, .vv-meta__title, .vv-favorite__label, .vv-favorite__stat-num,
+.vv-reviews__bigrating-num, .vv-reviews__hero-text, .vv-book__hostname,
+.vv-tour__title, .vv-tour__sec-head h3, .vv-lead-modal__title,
+.footer-col-label, .footer-brand .tag {
+  font-family: 'Cairo', 'Montserrat', sans-serif;
+}
+/* Cairo has no italic — drop the editorial italic on the footer quote */
+.footer-brand .tag { font-style: normal; }
+
+/* ---------- "Show all photos" overlay button → bottom-start ---------- */
+.vv-hero__show-all { right: auto; left: 16px; }
+
+/* ---------- Language switcher menu → align to start edge ---------- */
+.vv-lang__menu { right: auto; left: 0; }
+
+/* ---------- Lead-modal close → top-start ---------- */
+.vv-lead-modal__close { right: auto; left: 12px; }
+
+/* ---------- Footer logo optical nudge ---------- */
+.footer-brand .logo-big { margin-left: 0; margin-right: -6px; }
+
+/* ---------- Mobile "Roses favorite" badge alignment ---------- */
+@media (max-width: 768px) {
+  .vv-favorite { text-align: right; }
+}
+
+/* ---------- Photo-tour chrome stays LTR ----------
+   The top bar (back arrow) and the thumbnail filmstrip + its scroll
+   arrows are direction-agnostic UI; keeping them LTR avoids the
+   reversed-scroll glitch. The tour body below stays RTL. */
+.vv-tour__topbar,
+.vv-tour__nav-wrap,
+.vv-tour__nav { direction: ltr; }
+.vv-tour__title,
+.vv-tour__nav a span { direction: rtl; }
+
+/* ---------- Mobile: switcher to the top-start corner ---------- */
+@media (max-width: 768px) {
+  .vv-header__right { right: auto; left: 16px; }
+}
