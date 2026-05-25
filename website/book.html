@@ -279,6 +279,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <p class="vv-explore__sub">Finnish sauna</p>
             </div>
           </div>
+          <div class="vv-explore__card" data-tour-section="garden">
+            <img class="vv-explore__img" src="media/gallery/garden-hammock.webp" alt="Garden hammock at Villa Victoria"/>
+            <div class="vv-explore__body">
+              <p class="vv-explore__name">Garden</p>
+              <p class="vv-explore__sub">Mediterranean grounds</p>
+            </div>
+          </div>
           <div class="vv-explore__card" data-tour-section="views">
             <img class="vv-explore__img" src="media/gallery/bbq.webp" alt="Outdoor BBQ area at Villa Victoria"/>
             <div class="vv-explore__body">
@@ -553,21 +560,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   'use strict';
 
   var SECTIONS = [
-    { id: 'pool',     title: 'Pool & terrace',   sub: 'Infinity edge',             photos: [['pool-terrace.webp',     'Pool terrace overlooking the Gulf of Roses'], ['pool-loungers.webp', 'Pool loungers'], ['pool-mosaic.webp', 'Pool with mosaic detail'], ['pool-breakfast.webp', 'Breakfast by the pool']] },
-    { id: 'views',    title: 'BBQ & views',      sub: 'Outdoor BBQ + Gulf views',  photos: [['bbq.webp',              'Outdoor BBQ area'], ['eagle-view.webp', 'Panoramic Gulf of Roses view from the villa']] },
+    { id: 'pool',     title: 'Pool & terrace',   sub: 'Infinity edge',             photos: [['pool-terrace.webp',     'Pool terrace overlooking the Gulf of Roses'], ['pool-loungers.webp', 'Pool loungers'], ['pool-mosaic.webp', 'Pool with mosaic detail'], ['pool-breakfast.webp', 'Breakfast by the pool'], ['pool-loungers-aperol.webp', 'Poolside loungers with marina view and aperitivo'], ['terrace-daybed.webp', 'Top terrace daybed at golden hour'], ['pool-loungers-sunset.webp', 'Sunset loungers above the marina'], ['bottom-terrace-hammock.webp', 'Bottom-floor terrace hammock with sea view']] },
+    { id: 'views',    title: 'BBQ & views',      sub: 'Outdoor BBQ + Gulf views',  photos: [['bbq.webp',              'Outdoor BBQ area'], ['eagle-view.webp', 'Panoramic Gulf of Roses view from the villa'], ['bbq-dining.webp', 'Indoor BBQ dining area with hanging egg chair'], ['garden-marina-sunset.webp', 'Marina sunset framed by olive branches']] },
     { id: 'jacuzzi',  title: 'Jacuzzi',          sub: 'Sea view',                  photos: [['jacuzzi.webp',          'Jacuzzi with sea view']] },
     { id: 'sauna',    title: 'Sauna',            sub: 'Finnish sauna',             photos: [['sauna.webp',            'Finnish sauna']] },
     { id: 'living',   title: 'Living room',      sub: 'Sea views, fireplace',      photos: [['living-fireplace.webp', 'Living room with fireplace'], ['living-chess.webp', 'Living room — chess table']] },
     { id: 'kitchen',  title: 'Kitchen & dining', sub: 'Fully equipped',            photos: [['kitchen.webp',          'Kitchen'], ['kitchen-dining.webp', 'Kitchen and dining area with sea view']] },
-    { id: 'cinema',   title: 'Home cinema',      sub: '',                          photos: [['cinema.webp',           'Home cinema room']] },
+    { id: 'cinema',   title: 'Home cinema',      sub: '',                          photos: [['cinema.webp',           'Home cinema room'], ['cinema-massage-chair.webp', 'Massage chair against the cinema rock wall']] },
     { id: 'bed1',     title: 'Bedroom 1',        sub: '1 king bed',                photos: [['bedroom1.webp',         'Bedroom 1 — master with sea view']] },
     { id: 'bed2',     title: 'Bedroom 2',        sub: '1 queen bed',               photos: [['bedroom2.webp',         'Bedroom 2']] },
     { id: 'bed3',     title: 'Bedroom 3',        sub: '1 king bed · 1 sofa bed',   photos: [['bedroom3.webp',         'Bedroom 3'], ['bedroom3-alt.webp', 'Bedroom 3 — alternate view']] },
-    { id: 'bath1',    title: 'Bathroom 1',       sub: '',                          photos: [['bathroom1.webp',        'Bathroom 1']] },
+    { id: 'bath1',    title: 'Bathroom 1',       sub: '',                          photos: [['bathroom1.webp',        'Bathroom 1'], ['bathroom1-alt.webp', 'Bathroom 1 — orchid and walk-in shower']] },
     { id: 'bath2',    title: 'Bathroom 2',       sub: '',                          photos: [['bathroom2.webp',        'Bathroom 2']] },
     { id: 'bath3',    title: 'Bathroom 3',       sub: '',                          photos: [['bathroom3.webp',        'Bathroom 3']] },
     { id: 'hallway',  title: 'Hallway',          sub: '',                          photos: [['hallway.webp',          'Hallway']] },
-    { id: 'entrance', title: 'Entrance',         sub: '',                          photos: [['entrance.webp',         'Entrance']] }
+    { id: 'entrance', title: 'Entrance',         sub: '',                          photos: [['entrance.webp',         'Entrance'], ['entrance-courtyard.webp', 'Stone entrance courtyard with potted lavender'], ['entrance-driveway.webp', 'Driveway with garage and Mediterranean shrine']] },
+    { id: 'garden',   title: 'Garden',           sub: 'Mediterranean grounds',     photos: [['garden-hammock.webp', 'Garden hammock among olive trees'], ['garden-cactus.webp', 'Garden path with cactus and yucca'], ['garden-villa-exterior.webp', 'The villa from the garden stairs']] }
   ];
 
   var BASE = 'media/gallery/';

@@ -45,7 +45,7 @@ window.__VV_TRANSLATIONS = {
     galleryHeadline2: 'villa.',
     catAll: 'All photos', catPool: 'Pool', catKitchen: 'Kitchen & dining',
     catBedroom1: 'Bedroom 1 & bath', catBedroom2: 'Bedroom 2 & bath', catBedroom3: 'Bedroom 3 & bath',
-    catLiving: 'Living spaces', catSauna: 'Sauna', catBbq: 'BBQ area', catCinema: 'Home cinema', catEagle: 'Eagle view',
+    catLiving: 'Living spaces', catEntrance: 'Entrance', catGarden: 'Garden', catSauna: 'Sauna', catBbq: 'BBQ area', catCinema: 'Home cinema', catEagle: 'Eagle view',
 
     // Area
     areaEyebrow: 'The Area',
@@ -183,7 +183,7 @@ window.__VV_TRANSLATIONS = {
     galleryHeadline2: 'villa.',
     catAll: 'Todas', catPool: 'Piscina', catKitchen: 'Cocina y comedor',
     catBedroom1: 'Dormitorio 1', catBedroom2: 'Dormitorio 2', catBedroom3: 'Dormitorio 3',
-    catLiving: 'Salones', catSauna: 'Sauna', catBbq: 'Zona BBQ', catCinema: 'Cine', catEagle: 'Vista aérea',
+    catLiving: 'Salones', catEntrance: 'Entrada', catGarden: 'Jardín', catSauna: 'Sauna', catBbq: 'Zona BBQ', catCinema: 'Cine', catEagle: 'Vista aérea',
 
     areaEyebrow: 'La Zona',
     areaHeadline1: 'Cada uno encuentra su',
@@ -312,7 +312,7 @@ window.__VV_TRANSLATIONS = {
     galleryHeadline2: 'villa.',
     catAll: 'Toutes', catPool: 'Piscine', catKitchen: 'Cuisine & repas',
     catBedroom1: 'Chambre 1', catBedroom2: 'Chambre 2', catBedroom3: 'Chambre 3',
-    catLiving: 'Salons', catSauna: 'Sauna', catBbq: 'Zone BBQ', catCinema: 'Cinéma', catEagle: 'Vue aérienne',
+    catLiving: 'Salons', catEntrance: 'Entrée', catGarden: 'Jardin', catSauna: 'Sauna', catBbq: 'Zone BBQ', catCinema: 'Cinéma', catEagle: 'Vue aérienne',
 
     areaEyebrow: 'La Région',
     areaHeadline1: 'Chacun trouve sa',
@@ -441,7 +441,7 @@ window.__VV_TRANSLATIONS = {
     galleryHeadline2: 'Villa.',
     catAll: 'Alle Fotos', catPool: 'Pool', catKitchen: 'Küche & Essen',
     catBedroom1: 'Schlafzimmer 1', catBedroom2: 'Schlafzimmer 2', catBedroom3: 'Schlafzimmer 3',
-    catLiving: 'Wohnräume', catSauna: 'Sauna', catBbq: 'BBQ-Bereich', catCinema: 'Heimkino', catEagle: 'Luftaufnahme',
+    catLiving: 'Wohnräume', catEntrance: 'Eingang', catGarden: 'Garten', catSauna: 'Sauna', catBbq: 'BBQ-Bereich', catCinema: 'Heimkino', catEagle: 'Luftaufnahme',
 
     areaEyebrow: 'Die Umgebung',
     areaHeadline1: 'Jeder findet seinen',
