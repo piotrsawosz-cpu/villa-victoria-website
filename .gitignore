@@ -57,3 +57,12 @@ inbox/*
 
 # Windows
 Thumbs.db
+
+# Playwright MCP artifacts (screenshots, snapshots, console logs from Claude sessions)
+.playwright-mcp/
+
+# Generated AI ad images — large binaries, kept local like assets/
+# (the ad-generation-instructions.md alongside them IS committed)
+ads/Higgsfield/*.png
+ads/Higgsfield/*.jpg
+ads/Higgsfield/*.mp4

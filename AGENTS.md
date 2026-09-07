@@ -1,4 +1,4 @@
-# Villa Victoria — Claude Code Project Memory
+# Villa Victoria — Codex Project Memory
 
 ## What This Project Is
 
@@ -112,18 +112,18 @@ All website source code lives inside the `website/` folder. Vercel is configured
 - **New gallery images → `website/media/gallery/`**
 - **New website-ready brand assets → `website/brand/`**
 - **New raw/source brand assets → `brand-guidelines/`** (not inside `website/`)
-- `.claude/` is gitignored — Claude's memory lives there safely without going to GitHub.
+- `.Codex/` is gitignored — Codex's memory lives there safely without going to GitHub.
 - `Pictures/` and `Old Files/` are gitignored — they never go to GitHub.
 
 ### Folders that should NEVER be pushed to GitHub
 
-- `.claude/` — personal Claude config and memory
+- `.Codex/` — personal Codex config and memory
 - `Pictures/` — source photography and AI images (too large, gitignored)
 - `Old Files/` — legacy duplicates (gitignored)
 - `archive/` — local-only superseded material (gitignored)
 - `assets/` — local-only source binaries (raw photos, AI images), gitignored
 - `inbox/` (except its `README.md`) — triage zone, contents are personal
-- `CLAUDE.local.md` — personal Claude overrides (gitignored)
+- `Codex.local.md` — personal Codex overrides (gitignored)
 - `.env` and `.env.*` — secrets (gitignored)
 - Any file ending in ` 2.ext` — Mac Finder duplicates
 
@@ -136,7 +136,7 @@ When told **"push those updates to our GitHub repo"**:
 1. **Sanity check** — `git status` and `git diff --staged`. Unstage anything from the never-push list before committing.
 2. **Stage explicitly** (only paths that actually changed in the session):
    ```bash
-   git add website/ CLAUDE.md ads/ brand-guidelines/ reviews/ .gitignore vercel.json \
+   git add website/ AGENTS.md ads/ brand-guidelines/ reviews/ .gitignore vercel.json \
            context/ connectors/ .mcp.json
    ```
 3. **Commit and push** (confirm with the user before `git push`):
@@ -157,7 +157,7 @@ These rules apply to working in this repo, separate from the brand/file-organiza
 
 1. **For project context, read `context/README.md` first.** It indexes every context file with a short description and tells you when each is relevant. Read individual context files only when the task calls for them — never read every file in `context/` by default.
 2. **`inbox/` is a triage zone, not storage.** When the user says they've added a file to inbox, run `/triage-inbox`.
-3. **Personal overrides live in `CLAUDE.local.md`** (gitignored), not here.
+3. **Personal overrides live in `Codex.local.md`** (gitignored), not here.
 4. **When you add a connector, MCP server, or skill, update the manifest below in the same change.** If it's not in this file, you'll forget it exists.
 
 ---
@@ -172,7 +172,7 @@ Registered in `.mcp.json`. Supporting files (configs, helpers) live in `connecto
 
 | Name | Purpose |
 |---|---|
-| `meta-ads` | Read, draft, launch, and review Meta (Facebook/Instagram) ad campaigns. Official Meta MCP, open beta. OAuth via Meta Business Suite AI Connectors. User-scoped (`~/.claude.json`), not in this repo's `.mcp.json`. |
+| `meta-ads` | Read, draft, launch, and review Meta (Facebook/Instagram) ad campaigns. Official Meta MCP, open beta. OAuth via Meta Business Suite AI Connectors. User-scoped (`~/.Codex.json`), not in this repo's `.mcp.json`. |
 
 ### CLI connectors
 
@@ -183,27 +183,24 @@ Command-line tools you can shell out to. Each has a folder in `connectors/<name>
 | `github` | Push website updates to `piotrsawosz-cpu/villa-victoria-website`. Auth via HTTPS + macOS Keychain. | `connectors/github/` |
 | `meta-ads` | Reference docs for the Meta Ads MCP connector — auth, capabilities, guardrails, CLI fallback. | `connectors/meta-ads/` |
 | `notebooklm` | Drive Google NotebookLM (notebooks, sources, ask, generate audio/video/briefings) via the unofficial `notebooklm-py` CLI. Cookie auth via `notebooklm login`. | `connectors/notebooklm/` |
-| `composio` | Execute actions across 1000+ SaaS tools via the Composio CLI (`search` → `execute`). **Uses a project-scoped account** (`villa.victoriaspain@gmail.com`) via `COMPOSIO_CACHE_DIR`; the machine's global Composio login is a different business. | `connectors/composio/` |
 
 ### Skills
 
-Project-local skills live in `.claude/skills/<skill-name>/` (gitignored, so personal). Auto-discovered via frontmatter in each `SKILL.md`, but listed here so they surface during planning.
+Project-local skills live in `.Codex/skills/<skill-name>/` (gitignored, so personal). Auto-discovered via frontmatter in each `SKILL.md`, but listed here so they surface during planning.
 
 | Skill | Purpose |
 |---|---|
 | `skill-creator` | Create new skills, modify and improve existing skills, and measure skill performance. Use whenever the user wants to create, edit, or evaluate a skill. |
-| `villa-ad-builder` | Generate a single Villa Victoria ad image via Higgsfield Nano Banana Pro, grounded in a real villa reference photo, against country motivators (`ads/<country>-ad-motivators.md`), with deduplication via `ads/registry.md`. Downloads to `assets/ads/images/<country>-<slug>-<YYYYMMDD>/`. Open-ended/strategic. |
-| `villa-lifestyle-ad` | Templated sibling of `villa-ad-builder`: produces ads from the locked "designed lifestyle ad" recipe — AI lifestyle photo + unified Montserrat type + "Costa Brava, Spain" tag + terracotta CTA button. Use for fast, repeat, fixed-layout ad production. Shares `ads/registry.md`. |
-| `notebooklm` (user-level, `~/.claude/skills/notebooklm`) | Lets Claude drive NotebookLM via the `notebooklm` CLI. Installed by `notebooklm skill install`; reinstall after `uv tool upgrade notebooklm-py`. See `connectors/notebooklm/`. |
+| `villa-ad-builder` | Generate a single Villa Victoria ad image via Higgsfield Nano Banana Pro, grounded in a real villa reference photo, against country motivators (`ads/<country>-ad-motivators.md`), with deduplication via `ads/registry.md`. Downloads to `assets/ads/images/<country>-<slug>-<YYYYMMDD>/`. |
+| `notebooklm` (user-level, `~/.Codex/skills/notebooklm`) | Lets Codex drive NotebookLM via the `notebooklm` CLI. Installed by `notebooklm skill install`; reinstall after `uv tool upgrade notebooklm-py`. See `connectors/notebooklm/`. |
 
 ### Slash commands
 
-Custom commands in `.claude/commands/` (gitignored).
+Custom commands in `.Codex/commands/` (gitignored).
 
 | Command | Purpose |
 |---|---|
 | `/triage-inbox` | Sort files in `inbox/` into their proper homes. |
-| `/publish` | Ship website changes: SEO pre-flight, commit + push, verify live, then resubmit the sitemap to Search Console. Say "publish" or "push it live". |
 
 ### Meta Ads guardrails
 

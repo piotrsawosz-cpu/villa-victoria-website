@@ -30,6 +30,7 @@ connectors/
 | Connector | Type | Purpose |
 |---|---|---|
 | `github` | CLI (system git) | Push the workspace to `piotrsawosz-cpu/villa-victoria-website`. Auth via HTTPS + Keychain. |
+| `composio` | CLI | Connect agents to 1000+ SaaS tools (Gmail, Slack, Notion…). Scoped to the Villa Victoria Composio account via `COMPOSIO_CACHE_DIR` — see its README before use. |
 
 When adding a connector, also add a row to the **MCP servers** or **CLI connectors** section of `/CLAUDE.md`. Without that step, Claude won't know the connector exists.
 

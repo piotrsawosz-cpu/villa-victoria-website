@@ -14,6 +14,31 @@ Pushes this workspace to the `villa-victoria-website` GitHub repo. The "connecto
 - If a push prompts for credentials: generate a GitHub Personal Access Token at https://github.com/settings/tokens (scope: `repo`), paste it as the password — Keychain will remember it.
 - Never commit a token, never write one to `.env`.
 
+### Wrong-account push failures (hit 2026-09-06)
+
+A push can fail with **`Permission to <repo> denied to apsawosz-alt` / HTTP 403** even though
+nothing changed. Cause: the `gh` CLI has **four** accounts logged in on this Mac, and the *active*
+one is `apsawosz-alt`, which has no write access to this repo. `git` picks up that credential.
+
+Check which account is active:
+
+```bash
+gh auth status          # look for "Active account: true"
+```
+
+Fix for a single push, **without** changing the machine-wide active account (switching it would
+disturb the `uniqtime` and `boost-miami` businesses that share this Mac):
+
+```bash
+GH_TOKEN="$(gh auth token --user piotrsawosz-cpu)" \
+  git -c credential.helper='!f(){ test "$1" = get && printf "username=piotrsawosz-cpu\npassword=%s\n" "$GH_TOKEN"; };f' \
+  push origin main
+```
+
+Nothing is written to disk and no global state changes. To fix it permanently instead, run
+`gh auth switch --user piotrsawosz-cpu` — but be aware that is machine-wide and affects the
+other accounts' repos.
+
 ## Identity
 
 Git identity is set **locally inside this repo**, not globally. Verify with:
